@@ -1,0 +1,54 @@
+[0.061s] Invoking command in '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/build/plansys2_bt_lp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gvega/Desktop/ir_robots_ws/install/joy_teleop:/home/gvega/Desktop/ir_robots_ws/install/mouse_teleop:/home/gvega/Desktop/ir_robots_ws/install/launch_pal:/home/gvega/Desktop/ir_robots_ws/install/key_teleop:/home/gvega/Desktop/ros2_computer_vision/install/joy_teleop:/home/gvega/Desktop/ros2_computer_vision/install/mouse_teleop:/home/gvega/Desktop/ros2_computer_vision/install/launch_pal:/home/gvega/Desktop/ros2_computer_vision/install/key_teleop:/home/gvega/Desktop/book_ros2/install/launch_pal:/home/gvega/Desktop/book_ros2/install/br2_fsm_bumpgo_py:/opt/ros/humble /usr/bin/cmake --build /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/build/plansys2_bt_lp -- -j8 -l8
+[0.213s] [35m[1mConsolidate compiler generated dependencies of target nav2_sim_node[0m
+[0.215s] [35m[1mConsolidate compiler generated dependencies of target plansys2_approach_object_bt_node[0m
+[0.216s] [35m[1mConsolidate compiler generated dependencies of target plansys2_close_gripper_bt_node[0m
+[0.216s] [35m[1mConsolidate compiler generated dependencies of target assemble_controller_node[0m
+[0.217s] [35m[1mConsolidate compiler generated dependencies of target assemble_action_node[0m
+[0.217s] [35m[1mConsolidate compiler generated dependencies of target plansys2_recharge_bt_node[0m
+[0.232s] [35m[1mConsolidate compiler generated dependencies of target plansys2_open_gripper_bt_node[0m
+[0.282s] [  6%] [32mBuilding CXX object CMakeFiles/plansys2_move_bt_node.dir/src/behavior_tree_nodes/Move.cpp.o[0m
+[0.282s] [ 18%] Built target plansys2_approach_object_bt_node
+[0.298s] [ 31%] Built target plansys2_recharge_bt_node
+[0.299s] [ 43%] Built target plansys2_close_gripper_bt_node
+[0.314s] [ 56%] Built target nav2_sim_node
+[0.316s] [ 68%] Built target plansys2_open_gripper_bt_node
+[0.322s] [ 93%] Built target assemble_action_node
+[0.323s] [ 93%] Built target assemble_controller_node
+[11.168s] [100%] [32m[1mLinking CXX shared library libplansys2_move_bt_node.so[0m
+[12.083s] [100%] Built target plansys2_move_bt_node
+[12.124s] Invoked command in '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/build/plansys2_bt_lp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gvega/Desktop/ir_robots_ws/install/joy_teleop:/home/gvega/Desktop/ir_robots_ws/install/mouse_teleop:/home/gvega/Desktop/ir_robots_ws/install/launch_pal:/home/gvega/Desktop/ir_robots_ws/install/key_teleop:/home/gvega/Desktop/ros2_computer_vision/install/joy_teleop:/home/gvega/Desktop/ros2_computer_vision/install/mouse_teleop:/home/gvega/Desktop/ros2_computer_vision/install/launch_pal:/home/gvega/Desktop/ros2_computer_vision/install/key_teleop:/home/gvega/Desktop/book_ros2/install/launch_pal:/home/gvega/Desktop/book_ros2/install/br2_fsm_bumpgo_py:/opt/ros/humble /usr/bin/cmake --build /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/build/plansys2_bt_lp -- -j8 -l8
+[12.384s] Invoking command in '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/build/plansys2_bt_lp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gvega/Desktop/ir_robots_ws/install/joy_teleop:/home/gvega/Desktop/ir_robots_ws/install/mouse_teleop:/home/gvega/Desktop/ir_robots_ws/install/launch_pal:/home/gvega/Desktop/ir_robots_ws/install/key_teleop:/home/gvega/Desktop/ros2_computer_vision/install/joy_teleop:/home/gvega/Desktop/ros2_computer_vision/install/mouse_teleop:/home/gvega/Desktop/ros2_computer_vision/install/launch_pal:/home/gvega/Desktop/ros2_computer_vision/install/key_teleop:/home/gvega/Desktop/book_ros2/install/launch_pal:/home/gvega/Desktop/book_ros2/install/br2_fsm_bumpgo_py:/opt/ros/humble /usr/bin/cmake --install /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/build/plansys2_bt_lp
+[12.403s] -- Install configuration: ""
+[12.403s] -- Execute custom install script
+[12.404s] -- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/launch/commands
+[12.440s] -- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/launch/plansys2_bt_example_launch.py
+[12.475s] -- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/pddl/bt_example.pddl
+[12.510s] -- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/behavior_trees_xml/move.xml
+[12.557s] -- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/behavior_trees_xml/recharge.xml
+[12.585s] -- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/behavior_trees_xml/transport.xml
+[12.621s] -- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/config/params.yaml
+[12.644s] -- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/lib/plansys2_bt_lp/assemble_action_node
+[12.668s] -- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/lib/plansys2_bt_lp/assemble_controller_node
+[12.691s] -- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/lib/plansys2_bt_lp/nav2_sim_node
+[12.715s] -- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/lib/libplansys2_recharge_bt_node.so
+[12.742s] -- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/lib/libplansys2_close_gripper_bt_node.so
+[12.765s] -- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/lib/libplansys2_open_gripper_bt_node.so
+[12.789s] -- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/lib/libplansys2_move_bt_node.so
+[12.814s] -- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/lib/libplansys2_approach_object_bt_node.so
+[12.848s] -- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/ament_index/resource_index/package_run_dependencies/plansys2_bt_lp
+[12.873s] -- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/ament_index/resource_index/parent_prefix_path/plansys2_bt_lp
+[12.904s] -- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/environment/ament_prefix_path.sh
+[12.941s] -- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/environment/ament_prefix_path.dsv
+[12.980s] -- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/environment/path.sh
+[13.005s] -- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/environment/path.dsv
+[13.029s] -- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/local_setup.bash
+[13.054s] -- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/local_setup.sh
+[13.078s] -- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/local_setup.zsh
+[13.111s] -- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/local_setup.dsv
+[13.135s] -- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/package.dsv
+[13.159s] -- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/ament_index/resource_index/packages/plansys2_bt_lp
+[13.194s] -- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/cmake/ament_cmake_export_dependencies-extras.cmake
+[13.228s] -- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/cmake/plansys2_bt_lpConfig.cmake
+[13.251s] -- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/cmake/plansys2_bt_lpConfig-version.cmake
+[13.275s] -- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/package.xml
+[13.314s] Invoked command in '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/build/plansys2_bt_lp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gvega/Desktop/ir_robots_ws/install/joy_teleop:/home/gvega/Desktop/ir_robots_ws/install/mouse_teleop:/home/gvega/Desktop/ir_robots_ws/install/launch_pal:/home/gvega/Desktop/ir_robots_ws/install/key_teleop:/home/gvega/Desktop/ros2_computer_vision/install/joy_teleop:/home/gvega/Desktop/ros2_computer_vision/install/mouse_teleop:/home/gvega/Desktop/ros2_computer_vision/install/launch_pal:/home/gvega/Desktop/ros2_computer_vision/install/key_teleop:/home/gvega/Desktop/book_ros2/install/launch_pal:/home/gvega/Desktop/book_ros2/install/br2_fsm_bumpgo_py:/opt/ros/humble /usr/bin/cmake --install /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/build/plansys2_bt_lp

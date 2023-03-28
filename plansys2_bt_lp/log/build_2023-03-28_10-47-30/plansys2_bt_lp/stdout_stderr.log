@@ -1,0 +1,86 @@
+-- The C compiler identification is GNU 11.3.0
+-- The CXX compiler identification is GNU 11.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.3 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 16.0.3 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.4 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.4 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+-- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found rclcpp_action: 16.0.3 (/opt/ros/humble/share/rclcpp_action/cmake)
+-- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+-- Found tf2_geometry_msgs: 0.25.2 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+-- Found Eigen3: TRUE (found version "3.4.0") 
+-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+-- Found nav2_msgs: 1.1.0 (/home/gvega/Desktop/ros2_computer_vision/install/nav2_msgs/share/nav2_msgs/cmake)
+-- Found plansys2_msgs: 2.0.8 (/home/gvega/Desktop/plansys2/install/plansys2_msgs/share/plansys2_msgs/cmake)
+-- Found plansys2_domain_expert: 2.0.8 (/home/gvega/Desktop/plansys2/install/plansys2_domain_expert/share/plansys2_domain_expert/cmake)
+-- Found plansys2_executor: 2.0.8 (/home/gvega/Desktop/plansys2/install/plansys2_executor/share/plansys2_executor/cmake)
+-- Found plansys2_bt_actions: 2.0.8 (/home/gvega/Desktop/plansys2/install/plansys2_bt_actions/share/plansys2_bt_actions/cmake)
+-- Found ament_lint_auto: 0.12.5 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/include
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/build/plansys2_bt_lp
+[ 12%] [32mBuilding CXX object CMakeFiles/plansys2_recharge_bt_node.dir/src/behavior_tree_nodes/Recharge.cpp.o[0m
+[ 12%] [32mBuilding CXX object CMakeFiles/nav2_sim_node.dir/src/nav2_sim_node.cpp.o[0m
+[ 18%] [32mBuilding CXX object CMakeFiles/plansys2_move_bt_node.dir/src/behavior_tree_nodes/Move.cpp.o[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/plansys2_open_gripper_bt_node.dir/src/behavior_tree_nodes/OpenGripper.cpp.o[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/assemble_action_node.dir/src/assemble_action_node.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/assemble_controller_node.dir/src/assemble_controller_node.cpp.o[0m
+[ 43%] [32mBuilding CXX object CMakeFiles/plansys2_approach_object_bt_node.dir/src/behavior_tree_nodes/ApproachObject.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/plansys2_close_gripper_bt_node.dir/src/behavior_tree_nodes/CloseGripper.cpp.o[0m
+[01m[K/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/src/behavior_tree_nodes/Move.cpp:20:10:[m[K [01;31m[Kfatal error: [m[Kplansys2_bt_example/behavior_tree_nodes/Move.hpp: No such file or directory
+   20 | #include [01;31m[K"plansys2_bt_example/behavior_tree_nodes/Move.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/plansys2_move_bt_node.dir/build.make:76: CMakeFiles/plansys2_move_bt_node.dir/src/behavior_tree_nodes/Move.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:229: CMakeFiles/plansys2_move_bt_node.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+[ 56%] [32m[1mLinking CXX shared library libplansys2_recharge_bt_node.so[0m
+[ 62%] [32m[1mLinking CXX shared library libplansys2_close_gripper_bt_node.so[0m
+[ 68%] [32m[1mLinking CXX shared library libplansys2_open_gripper_bt_node.so[0m
+[ 75%] [32m[1mLinking CXX shared library libplansys2_approach_object_bt_node.so[0m
+[ 75%] Built target plansys2_recharge_bt_node
+[ 75%] Built target plansys2_close_gripper_bt_node
+[ 75%] Built target plansys2_approach_object_bt_node
+[ 75%] Built target plansys2_open_gripper_bt_node
+[ 81%] [32m[1mLinking CXX executable nav2_sim_node[0m
+[ 81%] Built target nav2_sim_node
+[ 87%] [32m[1mLinking CXX executable assemble_action_node[0m
+[ 93%] [32m[1mLinking CXX executable assemble_controller_node[0m
+[ 93%] Built target assemble_action_node
+[ 93%] Built target assemble_controller_node
+gmake: *** [Makefile:146: all] Error 2

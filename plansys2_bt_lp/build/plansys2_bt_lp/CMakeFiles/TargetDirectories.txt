@@ -1,0 +1,17 @@
+/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/build/plansys2_bt_lp/CMakeFiles/uninstall.dir
+/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/build/plansys2_bt_lp/CMakeFiles/plansys2_bt_lp_uninstall.dir
+/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/build/plansys2_bt_lp/CMakeFiles/plansys2_recharge_bt_node.dir
+/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/build/plansys2_bt_lp/CMakeFiles/plansys2_close_gripper_bt_node.dir
+/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/build/plansys2_bt_lp/CMakeFiles/plansys2_open_gripper_bt_node.dir
+/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/build/plansys2_bt_lp/CMakeFiles/plansys2_move_bt_node.dir
+/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/build/plansys2_bt_lp/CMakeFiles/plansys2_approach_object_bt_node.dir
+/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/build/plansys2_bt_lp/CMakeFiles/assemble_action_node.dir
+/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/build/plansys2_bt_lp/CMakeFiles/assemble_controller_node.dir
+/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/build/plansys2_bt_lp/CMakeFiles/nav2_sim_node.dir
+/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/build/plansys2_bt_lp/CMakeFiles/test.dir
+/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/build/plansys2_bt_lp/CMakeFiles/edit_cache.dir
+/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/build/plansys2_bt_lp/CMakeFiles/rebuild_cache.dir
+/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/build/plansys2_bt_lp/CMakeFiles/list_install_components.dir
+/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/build/plansys2_bt_lp/CMakeFiles/install.dir
+/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/build/plansys2_bt_lp/CMakeFiles/install/local.dir
+/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/build/plansys2_bt_lp/CMakeFiles/install/strip.dir

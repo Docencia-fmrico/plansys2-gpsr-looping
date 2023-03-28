@@ -1,0 +1,1 @@
+/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/pddl/bt_example.pddl

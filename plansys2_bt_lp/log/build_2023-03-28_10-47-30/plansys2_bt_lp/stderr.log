@@ -1,0 +1,8 @@
+[01m[K/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/src/behavior_tree_nodes/Move.cpp:20:10:[m[K [01;31m[Kfatal error: [m[Kplansys2_bt_example/behavior_tree_nodes/Move.hpp: No such file or directory
+   20 | #include [01;31m[K"plansys2_bt_example/behavior_tree_nodes/Move.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/plansys2_move_bt_node.dir/build.make:76: CMakeFiles/plansys2_move_bt_node.dir/src/behavior_tree_nodes/Move.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:229: CMakeFiles/plansys2_move_bt_node.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,50 @@
+[35m[1mConsolidate compiler generated dependencies of target nav2_sim_node[0m
+[35m[1mConsolidate compiler generated dependencies of target plansys2_approach_object_bt_node[0m
+[35m[1mConsolidate compiler generated dependencies of target plansys2_close_gripper_bt_node[0m
+[35m[1mConsolidate compiler generated dependencies of target assemble_controller_node[0m
+[35m[1mConsolidate compiler generated dependencies of target assemble_action_node[0m
+[35m[1mConsolidate compiler generated dependencies of target plansys2_recharge_bt_node[0m
+[35m[1mConsolidate compiler generated dependencies of target plansys2_open_gripper_bt_node[0m
+[  6%] [32mBuilding CXX object CMakeFiles/plansys2_move_bt_node.dir/src/behavior_tree_nodes/Move.cpp.o[0m
+[ 18%] Built target plansys2_approach_object_bt_node
+[ 31%] Built target plansys2_recharge_bt_node
+[ 43%] Built target plansys2_close_gripper_bt_node
+[ 56%] Built target nav2_sim_node
+[ 68%] Built target plansys2_open_gripper_bt_node
+[ 93%] Built target assemble_action_node
+[ 93%] Built target assemble_controller_node
+[100%] [32m[1mLinking CXX shared library libplansys2_move_bt_node.so[0m
+[100%] Built target plansys2_move_bt_node
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/launch/commands
+-- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/launch/plansys2_bt_example_launch.py
+-- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/pddl/bt_example.pddl
+-- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/behavior_trees_xml/move.xml
+-- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/behavior_trees_xml/recharge.xml
+-- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/behavior_trees_xml/transport.xml
+-- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/config/params.yaml
+-- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/lib/plansys2_bt_lp/assemble_action_node
+-- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/lib/plansys2_bt_lp/assemble_controller_node
+-- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/lib/plansys2_bt_lp/nav2_sim_node
+-- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/lib/libplansys2_recharge_bt_node.so
+-- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/lib/libplansys2_close_gripper_bt_node.so
+-- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/lib/libplansys2_open_gripper_bt_node.so
+-- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/lib/libplansys2_move_bt_node.so
+-- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/lib/libplansys2_approach_object_bt_node.so
+-- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/ament_index/resource_index/package_run_dependencies/plansys2_bt_lp
+-- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/ament_index/resource_index/parent_prefix_path/plansys2_bt_lp
+-- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/environment/ament_prefix_path.sh
+-- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/environment/ament_prefix_path.dsv
+-- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/environment/path.sh
+-- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/environment/path.dsv
+-- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/local_setup.bash
+-- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/local_setup.sh
+-- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/local_setup.zsh
+-- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/local_setup.dsv
+-- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/package.dsv
+-- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/ament_index/resource_index/packages/plansys2_bt_lp
+-- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/cmake/plansys2_bt_lpConfig.cmake
+-- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/cmake/plansys2_bt_lpConfig-version.cmake
+-- Symlinking: /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/package.xml

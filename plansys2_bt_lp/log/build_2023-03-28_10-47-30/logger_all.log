@@ -1,0 +1,86 @@
+[0.385s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install', '--packages-select', 'plansys2_bt_lp']
+[0.385s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['plansys2_bt_lp'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f8eb89f7820>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f8eb92006d0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f8eb92006d0>>)
+[0.414s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.414s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.414s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.414s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.414s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.414s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.415s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp'
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.430s] DEBUG:colcon.colcon_core.package_identification:Package '.' with type 'ros.ament_cmake' and name 'plansys2_bt_lp'
+[0.430s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.430s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.430s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.430s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.430s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.459s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.459s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.471s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 19 installed packages in /home/gvega/Desktop/plansys2/install
+[0.474s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/gvega/Desktop/groot_ws/Groot/install
+[0.478s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 88 installed packages in /home/gvega/Desktop/ir_robots_ws/install
+[0.482s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 33 installed packages in /home/gvega/Desktop/ros2_computer_vision/install
+[0.486s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/gvega/Desktop/looping_ws/install
+[0.488s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 35 installed packages in /home/gvega/Desktop/book_ros2/install
+[0.495s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 402 installed packages in /opt/ros/humble
+[0.498s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.590s] Level 5:colcon.colcon_core.verb:set package 'plansys2_bt_lp' build argument 'cmake_args' from command line to 'None'
+[0.590s] Level 5:colcon.colcon_core.verb:set package 'plansys2_bt_lp' build argument 'cmake_target' from command line to 'None'
+[0.590s] Level 5:colcon.colcon_core.verb:set package 'plansys2_bt_lp' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.590s] Level 5:colcon.colcon_core.verb:set package 'plansys2_bt_lp' build argument 'cmake_clean_cache' from command line to 'False'
+[0.590s] Level 5:colcon.colcon_core.verb:set package 'plansys2_bt_lp' build argument 'cmake_clean_first' from command line to 'False'
+[0.590s] Level 5:colcon.colcon_core.verb:set package 'plansys2_bt_lp' build argument 'cmake_force_configure' from command line to 'False'
+[0.590s] Level 5:colcon.colcon_core.verb:set package 'plansys2_bt_lp' build argument 'ament_cmake_args' from command line to 'None'
+[0.590s] Level 5:colcon.colcon_core.verb:set package 'plansys2_bt_lp' build argument 'catkin_cmake_args' from command line to 'None'
+[0.590s] Level 5:colcon.colcon_core.verb:set package 'plansys2_bt_lp' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.590s] DEBUG:colcon.colcon_core.verb:Building package 'plansys2_bt_lp' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/build/plansys2_bt_lp', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp', 'merge_install': False, 'path': '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp', 'symlink_install': True, 'test_result_base': None}
+[0.591s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.595s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.595s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp' with build type 'ament_cmake'
+[0.595s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp'
+[0.601s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.601s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.601s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.634s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/build/plansys2_bt_lp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gvega/Desktop/ir_robots_ws/install/joy_teleop:/home/gvega/Desktop/ir_robots_ws/install/mouse_teleop:/home/gvega/Desktop/ir_robots_ws/install/launch_pal:/home/gvega/Desktop/ir_robots_ws/install/key_teleop:/home/gvega/Desktop/ros2_computer_vision/install/joy_teleop:/home/gvega/Desktop/ros2_computer_vision/install/mouse_teleop:/home/gvega/Desktop/ros2_computer_vision/install/launch_pal:/home/gvega/Desktop/ros2_computer_vision/install/key_teleop:/home/gvega/Desktop/book_ros2/install/launch_pal:/home/gvega/Desktop/book_ros2/install/br2_fsm_bumpgo_py:/opt/ros/humble /usr/bin/cmake /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp
+[99.157s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/build/plansys2_bt_lp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gvega/Desktop/ir_robots_ws/install/joy_teleop:/home/gvega/Desktop/ir_robots_ws/install/mouse_teleop:/home/gvega/Desktop/ir_robots_ws/install/launch_pal:/home/gvega/Desktop/ir_robots_ws/install/key_teleop:/home/gvega/Desktop/ros2_computer_vision/install/joy_teleop:/home/gvega/Desktop/ros2_computer_vision/install/mouse_teleop:/home/gvega/Desktop/ros2_computer_vision/install/launch_pal:/home/gvega/Desktop/ros2_computer_vision/install/key_teleop:/home/gvega/Desktop/book_ros2/install/launch_pal:/home/gvega/Desktop/book_ros2/install/br2_fsm_bumpgo_py:/opt/ros/humble /usr/bin/cmake /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp
+[99.162s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/build/plansys2_bt_lp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gvega/Desktop/ir_robots_ws/install/joy_teleop:/home/gvega/Desktop/ir_robots_ws/install/mouse_teleop:/home/gvega/Desktop/ir_robots_ws/install/launch_pal:/home/gvega/Desktop/ir_robots_ws/install/key_teleop:/home/gvega/Desktop/ros2_computer_vision/install/joy_teleop:/home/gvega/Desktop/ros2_computer_vision/install/mouse_teleop:/home/gvega/Desktop/ros2_computer_vision/install/launch_pal:/home/gvega/Desktop/ros2_computer_vision/install/key_teleop:/home/gvega/Desktop/book_ros2/install/launch_pal:/home/gvega/Desktop/book_ros2/install/br2_fsm_bumpgo_py:/opt/ros/humble /usr/bin/cmake --build /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/build/plansys2_bt_lp -- -j8 -l8
+[121.837s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/build/plansys2_bt_lp' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gvega/Desktop/ir_robots_ws/install/joy_teleop:/home/gvega/Desktop/ir_robots_ws/install/mouse_teleop:/home/gvega/Desktop/ir_robots_ws/install/launch_pal:/home/gvega/Desktop/ir_robots_ws/install/key_teleop:/home/gvega/Desktop/ros2_computer_vision/install/joy_teleop:/home/gvega/Desktop/ros2_computer_vision/install/mouse_teleop:/home/gvega/Desktop/ros2_computer_vision/install/launch_pal:/home/gvega/Desktop/ros2_computer_vision/install/key_teleop:/home/gvega/Desktop/book_ros2/install/launch_pal:/home/gvega/Desktop/book_ros2/install/br2_fsm_bumpgo_py:/opt/ros/humble /usr/bin/cmake --build /home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/build/plansys2_bt_lp -- -j8 -l8
+[122.071s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(plansys2_bt_lp)
+[122.086s] Level 1:colcon.colcon_core.environment:checking '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp' for CMake module files
+[122.087s] Level 1:colcon.colcon_core.environment:checking '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp' for CMake config files
+[122.087s] Level 1:colcon.colcon_core.environment:checking '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/bin'
+[122.088s] Level 1:colcon.colcon_core.environment:checking '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/lib/pkgconfig/plansys2_bt_lp.pc'
+[122.088s] Level 1:colcon.colcon_core.environment:checking '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/lib/python3.10/site-packages'
+[122.089s] Level 1:colcon.colcon_core.environment:checking '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/bin'
+[122.092s] INFO:colcon.colcon_core.shell:Creating package script '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/package.ps1'
+[122.095s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/package.dsv'
+[122.096s] INFO:colcon.colcon_core.shell:Creating package script '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/package.sh'
+[122.099s] INFO:colcon.colcon_core.shell:Creating package script '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/package.bash'
+[122.100s] INFO:colcon.colcon_core.shell:Creating package script '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/plansys2_bt_lp/package.zsh'
+[122.102s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/plansys2_bt_lp/share/colcon-core/packages/plansys2_bt_lp)
+[122.113s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[122.114s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[122.114s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '2'
+[122.114s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[122.136s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[122.137s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[122.137s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[122.166s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[122.170s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/local_setup.ps1'
+[122.172s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/_local_setup_util_ps1.py'
+[122.176s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/setup.ps1'
+[122.191s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/local_setup.sh'
+[122.192s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/_local_setup_util_sh.py'
+[122.193s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/setup.sh'
+[122.210s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/local_setup.bash'
+[122.210s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/setup.bash'
+[122.224s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/local_setup.zsh'
+[122.225s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gvega/Desktop/looping_ws/src/plansys2-gpsr-looping/plansys2_bt_lp/install/setup.zsh'
