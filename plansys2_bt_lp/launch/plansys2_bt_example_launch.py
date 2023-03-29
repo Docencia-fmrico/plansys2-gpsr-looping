@@ -71,8 +71,8 @@ def generate_launch_description():
           example_dir + '/config/params.yaml',
           {
             'action_name': 'move',
-            'publisher_port': 1668,
-            'server_port': 1669,
+            'publisher_port': 1670,
+            'server_port': 1671,
             'bt_xml_file': example_dir + '/behavior_trees_xml/move.xml'
           }
         ])
@@ -87,8 +87,8 @@ def generate_launch_description():
           example_dir + '/config/params.yaml',
           {
             'action_name': 'item_for_grandma',
-            'publisher_port': 1668,
-            'server_port': 1669,
+            'publisher_port': 1672,
+            'server_port': 1673,
             'bt_xml_file': example_dir + '/behavior_trees_xml/item_for_grandma.xml'
           }
         ])
@@ -103,8 +103,8 @@ def generate_launch_description():
           example_dir + '/config/params.yaml',
           {
             'action_name': 'organize_item',
-            'publisher_port': 1668,
-            'server_port': 1669,
+            'publisher_port': 1674,
+            'server_port': 1675,
             'bt_xml_file': example_dir + '/behavior_trees_xml/organize_item.xml'
           }
         ])
@@ -119,8 +119,8 @@ def generate_launch_description():
           example_dir + '/config/params.yaml',
           {
             'action_name': 'open_door',
-            'publisher_port': 1668,
-            'server_port': 1669,
+            'publisher_port': 1676,
+            'server_port': 1677,
             'bt_xml_file': example_dir + '/behavior_trees_xml/open_door.xml'
           }
         ])
@@ -135,8 +135,8 @@ def generate_launch_description():
           example_dir + '/config/params.yaml',
           {
             'action_name': 'move_through_door',
-            'publisher_port': 1668,
-            'server_port': 1669,
+            'publisher_port': 1678,
+            'server_port': 1679,
             'bt_xml_file': example_dir + '/behavior_trees_xml/move_through_door.xml'
           }
         ])
@@ -151,8 +151,8 @@ def generate_launch_description():
           example_dir + '/config/params.yaml',
           {
             'action_name': 'drop_item',
-            'publisher_port': 1668,
-            'server_port': 1669,
+            'publisher_port': 1680,
+            'server_port': 1681,
             'bt_xml_file': example_dir + '/behavior_trees_xml/drop_item.xml'
           }
         ])
@@ -167,8 +167,8 @@ def generate_launch_description():
           example_dir + '/config/params.yaml',
           {
             'action_name': 'pick_item',
-            'publisher_port': 1668,
-            'server_port': 1669,
+            'publisher_port': 1682,
+            'server_port': 1683,
             'bt_xml_file': example_dir + '/behavior_trees_xml/pick_item.xml'
           }
         ])
@@ -183,8 +183,8 @@ def generate_launch_description():
           example_dir + '/config/params.yaml',
           {
             'action_name': 'request_open_door',
-            'publisher_port': 1668,
-            'server_port': 1669,
+            'publisher_port': 1684,
+            'server_port': 1685,
             'bt_xml_file': example_dir + '/behavior_trees_xml/request_open_door.xml'
           }
         ])
