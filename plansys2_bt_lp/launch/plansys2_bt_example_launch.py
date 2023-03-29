@@ -48,7 +48,7 @@ def generate_launch_description():
     grandma_chores_cmd = Node(
         package='plansys2_bt_actions',
         executable='bt_action_node',
-        name='move',
+        name='grandma_chores',
         namespace=namespace,
         output='screen',
         parameters=[
