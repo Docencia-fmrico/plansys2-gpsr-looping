@@ -62,8 +62,8 @@ endforeach()
 add_executable(assemble_action_node src/assemble_action_node.cpp)
 ament_target_dependencies(assemble_action_node ${dependencies})
 
-add_executable(assemble_controller_node src/assemble_controller_node.cpp)
-ament_target_dependencies(assemble_controller_node ${dependencies})
+add_executable(grandma_controller_node src/grandma_controller_node.cpp)
+ament_target_dependencies(grandma_controller_node ${dependencies})
 
 add_executable(nav2_sim_node src/nav2_sim_node.cpp)
 ament_target_dependencies(nav2_sim_node ${dependencies})
@@ -72,7 +72,7 @@ install(DIRECTORY launch pddl behavior_trees_xml config DESTINATION share/${PROJ
 
 install(TARGETS
   assemble_action_node
-  assemble_controller_node
+  grandma_controller_node
   nav2_sim_node
   ${plugin_libs}
   ARCHIVE DESTINATION lib
