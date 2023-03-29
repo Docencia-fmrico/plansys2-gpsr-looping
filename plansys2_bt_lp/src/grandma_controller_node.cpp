@@ -31,7 +31,7 @@ class Assemble : public rclcpp::Node
 {
 public:
   Assemble()
-  : rclcpp::Node("assembling_controller")
+  : rclcpp::Node("grandma_controller")
   {
   }
 
@@ -110,7 +110,7 @@ public:
     problem_expert_->addPredicate(plansys2::Predicate("(connected_door Garage Corridor Door8)"));
     problem_expert_->addPredicate(plansys2::Predicate("(connected_door Grandma_Bedroom Corridor Door7)"));
     problem_expert_->addPredicate(plansys2::Predicate("(connected_door Guest_Bedroom Corridor Door5)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(connected_door COrridor Livingroom Door3)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(connected_door Corridor Livingroom Door3)"));
     problem_expert_->addPredicate(plansys2::Predicate("(connected_door Corridor Kitchen Door4)"));
     problem_expert_->addPredicate(plansys2::Predicate("(connected_door Livingroom Bathroom Door2)"));
     problem_expert_->addPredicate(plansys2::Predicate("(connected_door Corridor Yard Door6)"));

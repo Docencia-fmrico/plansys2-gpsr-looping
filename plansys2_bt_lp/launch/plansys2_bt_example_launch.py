@@ -45,26 +45,26 @@ def generate_launch_description():
           }.items())
 
     # Specify the actions
-    move_1_cmd = Node(
+    grandma_chores_cmd = Node(
         package='plansys2_bt_actions',
         executable='bt_action_node',
-        name='move_1',
+        name='grandma_chores',
         namespace=namespace,
         output='screen',
         parameters=[
           example_dir + '/config/params.yaml',
           {
-            'action_name': 'move',
+            'action_name': 'grandma_chores',
             'publisher_port': 1668,
             'server_port': 1669,
-            'bt_xml_file': example_dir + '/behavior_trees_xml/move.xml'
+            'bt_xml_file': example_dir + '/behavior_trees_xml/grandma_chores.xml'
           }
         ])
 
-    move_2_cmd = Node(
+    move_cmd = Node(
         package='plansys2_bt_actions',
         executable='bt_action_node',
-        name='move_2',
+        name='move',
         namespace=namespace,
         output='screen',
         parameters=[
@@ -77,101 +77,115 @@ def generate_launch_description():
           }
         ])
 
-    move_3_cmd = Node(
+    item_for_grandma_cmd = Node(
         package='plansys2_bt_actions',
         executable='bt_action_node',
-        name='move_3',
+        name='item_for_grandma',
         namespace=namespace,
         output='screen',
         parameters=[
           example_dir + '/config/params.yaml',
           {
-            'action_name': 'move',
+            'action_name': 'item_for_grandma',
             'publisher_port': 1672,
             'server_port': 1673,
-            'bt_xml_file': example_dir + '/behavior_trees_xml/move.xml'
+            'bt_xml_file': example_dir + '/behavior_trees_xml/item_for_grandma.xml'
           }
         ])
-
-    transport_1_cmd = Node(
+    
+    organize_item_cmd = Node(
         package='plansys2_bt_actions',
         executable='bt_action_node',
-        name='transport_1',
+        name='organize_item',
         namespace=namespace,
         output='screen',
         parameters=[
           example_dir + '/config/params.yaml',
           {
-            'action_name': 'transport',
+            'action_name': 'organize_item',
             'publisher_port': 1674,
             'server_port': 1675,
-            'bt_xml_file': example_dir + '/behavior_trees_xml/transport.xml'
+            'bt_xml_file': example_dir + '/behavior_trees_xml/organize_item.xml'
           }
         ])
-    transport_2_cmd = Node(
+    
+    open_door_cmd = Node(
         package='plansys2_bt_actions',
         executable='bt_action_node',
-        name='transport_2',
+        name='open_door',
         namespace=namespace,
         output='screen',
         parameters=[
           example_dir + '/config/params.yaml',
           {
-            'action_name': 'transport',
+            'action_name': 'open_door',
             'publisher_port': 1676,
             'server_port': 1677,
-            'bt_xml_file': example_dir + '/behavior_trees_xml/transport.xml'
+            'bt_xml_file': example_dir + '/behavior_trees_xml/open_door.xml'
           }
         ])
-    transport_3_cmd = Node(
+    
+    move_through_door_cmd = Node(
         package='plansys2_bt_actions',
         executable='bt_action_node',
-        name='transport_3',
+        name='move_through_door',
         namespace=namespace,
         output='screen',
         parameters=[
           example_dir + '/config/params.yaml',
           {
-            'action_name': 'transport',
+            'action_name': 'move_through_door',
             'publisher_port': 1678,
             'server_port': 1679,
-            'bt_xml_file': example_dir + '/behavior_trees_xml/transport.xml'
+            'bt_xml_file': example_dir + '/behavior_trees_xml/move_through_door.xml'
           }
         ])
 
-    assemble_1_cmd = Node(
-        package='plansys2_bt_lp',
-        executable='assemble_action_node',
-        name='assemble_1',
-        namespace=namespace,
-        output='screen',
-        parameters=[])   # Create the launch description and populate
-    assemble_2_cmd = Node(
-        package='plansys2_bt_lp',
-        executable='assemble_action_node',
-        name='assemble_2',
-        namespace=namespace,
-        output='screen',
-        parameters=[])   # Create the launch description and populate
-    assemble_3_cmd = Node(
-        package='plansys2_bt_lp',
-        executable='assemble_action_node',
-        name='assemble_3',
-        namespace=namespace,
-        output='screen',
-        parameters=[])   # Create the launch description and populate
-
-    recharge_1_cmd = Node(
+    drop_item_cmd = Node(
         package='plansys2_bt_actions',
         executable='bt_action_node',
-        name='recharge_1',
+        name='drop_item',
         namespace=namespace,
         output='screen',
         parameters=[
           example_dir + '/config/params.yaml',
           {
-            'action_name': 'recharge',
-            'bt_xml_file': example_dir + '/behavior_trees_xml/recharge.xml'
+            'action_name': 'drop_item',
+            'publisher_port': 1680,
+            'server_port': 1681,
+            'bt_xml_file': example_dir + '/behavior_trees_xml/drop_item.xml'
+          }
+        ])
+    
+    pick_item_cmd = Node(
+        package='plansys2_bt_actions',
+        executable='bt_action_node',
+        name='pick_item',
+        namespace=namespace,
+        output='screen',
+        parameters=[
+          example_dir + '/config/params.yaml',
+          {
+            'action_name': 'pick_item',
+            'publisher_port': 1682,
+            'server_port': 1683,
+            'bt_xml_file': example_dir + '/behavior_trees_xml/pick_item.xml'
+          }
+        ])
+    
+    request_open_door_cmd = Node(
+        package='plansys2_bt_actions',
+        executable='bt_action_node',
+        name='request_open_door',
+        namespace=namespace,
+        output='screen',
+        parameters=[
+          example_dir + '/config/params.yaml',
+          {
+            'action_name': 'request_open_door',
+            'publisher_port': 1684,
+            'server_port': 1685,
+            'bt_xml_file': example_dir + '/behavior_trees_xml/request_open_door.xml'
           }
         ])
 
@@ -182,15 +196,15 @@ def generate_launch_description():
     # Declare the launch options
     ld.add_action(plansys2_cmd)
 
-    ld.add_action(move_1_cmd)
-    ld.add_action(move_2_cmd)
-    ld.add_action(move_3_cmd)
-    ld.add_action(transport_1_cmd)
-    ld.add_action(transport_2_cmd)
-    ld.add_action(transport_3_cmd)
-    ld.add_action(assemble_1_cmd)
-    ld.add_action(assemble_2_cmd)
-    ld.add_action(assemble_3_cmd)
-    ld.add_action(recharge_1_cmd)
+    ld.add_action(grandma_chores_cmd)
+    ld.add_action(item_for_grandma_cmd)
+    ld.add_action(organize_item_cmd)
+    ld.add_action(open_door_cmd)
+    ld.add_action(move_cmd)
+    ld.add_action(move_through_door_cmd)
+    ld.add_action(drop_item_cmd)
+    ld.add_action(pick_item_cmd)
+    ld.add_action(request_open_door_cmd)
+
 
     return ld
