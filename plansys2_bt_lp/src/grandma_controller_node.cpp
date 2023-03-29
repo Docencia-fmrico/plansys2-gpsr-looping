@@ -31,7 +31,7 @@ class Assemble : public rclcpp::Node
 {
 public:
   Assemble()
-  : rclcpp::Node("assembling_controller")
+  : rclcpp::Node("grandma_controller")
   {
   }
 
