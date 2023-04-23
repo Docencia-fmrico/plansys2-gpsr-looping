@@ -1,11 +1,7 @@
 <root main_tree_to_execute = "MainTree" >
     <BehaviorTree ID="MainTree">
        <Sequence name="root_sequence">
-           <OpenGripper    name="open_gripper"/>
-           <ApproachObject name="approach_object"/>
-           <CloseGripper   name="close_gripper"/>
-           <Move    name="move" goal="${arg3}"/>
-           <OpenGripper    name="open_gripper"/>
+           <ItemForGrandma    name="item_for_grandma"/>
        </Sequence>
     </BehaviorTree>
 </root>

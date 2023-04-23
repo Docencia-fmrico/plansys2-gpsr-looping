@@ -27,10 +27,10 @@
 #include "rclcpp/rclcpp.hpp"
 #include "rclcpp_action/rclcpp_action.hpp"
 
-class Assemble : public rclcpp::Node
+class Grandma : public rclcpp::Node
 {
 public:
-  Assemble()
+  Grandma()
   : rclcpp::Node("grandma_controller")
   {
   }
@@ -64,6 +64,7 @@ public:
 
   void init_knowledge()
   {
+    std::cout << "INIT KNOWLEDGE" << std::endl;
     problem_expert_->addInstance(plansys2::Instance{"Kitchen", "room"});
     problem_expert_->addInstance(plansys2::Instance{"Bathroom", "room"});
     problem_expert_->addInstance(plansys2::Instance{"Grandma_Bedroom", "room"});
@@ -72,6 +73,8 @@ public:
     problem_expert_->addInstance(plansys2::Instance{"Livingroom", "room"});
     problem_expert_->addInstance(plansys2::Instance{"Yard", "room"});
     problem_expert_->addInstance(plansys2::Instance{"Outside", "room"});
+
+    std::cout << "INIT INSTANCES" << std::endl;
 
     problem_expert_->addInstance(plansys2::Instance{"Corridor", "corridor"});
 
@@ -183,7 +186,7 @@ private:
 int main(int argc, char ** argv)
 {
   rclcpp::init(argc, argv);
-  auto node = std::make_shared<Assemble>();
+  auto node = std::make_shared<Grandma>();
 
   if (!node->init()) {
     return 0;
