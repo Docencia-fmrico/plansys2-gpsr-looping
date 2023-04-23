@@ -39,7 +39,7 @@ BT::NodeStatus
 OrganizeItem::tick()
 {
   std::cout << "OrganizeItem Tick" << std::endl;
-  return BT::NodeStatus::RUNNING;
+  return BT::NodeStatus::SUCCESS;
 }
 
 }  // namespace plansys2_bt_lp

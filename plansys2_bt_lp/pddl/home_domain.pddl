@@ -110,7 +110,7 @@
 
 (:durative-action open_door
   :parameters (?r - robot ?l1 ?l2 - location ?d - door)
-  :duration(= ?duration 3)
+  :duration(= ?duration 1)
   :condition 
     (and 
       (at start(close ?d))

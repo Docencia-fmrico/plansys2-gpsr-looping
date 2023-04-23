@@ -39,7 +39,7 @@ BT::NodeStatus
 MoveThroughDoor::tick()
 {
   std::cout << "MoveThroughDoor Tick" << std::endl;
-  return BT::NodeStatus::RUNNING;
+  return BT::NodeStatus::SUCCESS;
 }
 
 }  // namespace plansys2_bt_lp

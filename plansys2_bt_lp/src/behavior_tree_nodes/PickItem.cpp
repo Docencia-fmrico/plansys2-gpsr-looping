@@ -39,7 +39,7 @@ BT::NodeStatus
 PickItem::tick()
 {
   std::cout << "PickItem Tick" << std::endl;
-  return BT::NodeStatus::RUNNING;
+  return BT::NodeStatus::SUCCESS;
 }
 
 }  // namespace plansys2_bt_lp
