@@ -119,7 +119,7 @@ public:
     problem_expert_->addPredicate(plansys2::Predicate("(connected_door Corridor Yard Door6)"));
     problem_expert_->addPredicate(plansys2::Predicate("(connected_door Corridor Garage Door8)"));
     problem_expert_->addPredicate(plansys2::Predicate("(connected_door Corridor Grandma_Bedroom Door7)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(connected_door Corrior Guest_Bedroom Door5)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(connected_door Corridor Guest_Bedroom Door5)"));
     problem_expert_->addPredicate(plansys2::Predicate("(connected_door Outside Livingroom Door1)"));
     problem_expert_->addPredicate(plansys2::Predicate("(connected_door Livingroom Outside Door1)"));
 
@@ -148,19 +148,19 @@ public:
     problem_expert_->addPredicate(plansys2::Predicate("(item_at Bed Guest_Bedroom)"));
 
     // Organize the following objects
-    problem_expert_->addPredicate(plansys2::Predicate("(item_should be Towel Bathroom)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(item_should_be Towel Bathroom)"));
     problem_expert_->addPredicate(plansys2::Predicate("(item_disorganized Towel)"));
     problem_expert_->addPredicate(plansys2::Predicate("(item_should_be Tools Garage)"));
     problem_expert_->addPredicate(plansys2::Predicate("(item_disorganized Tools)"));
 
     // Grandma chores
-    problem_expert_->addPredicate(plansys2::Predicate("(grandma_get_open_door)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(grandma_wants Milk)"));
+    //problem_expert_->addPredicate(plansys2::Predicate("(grandma_get_open_door)"));
+    //problem_expert_->addPredicate(plansys2::Predicate("(grandma_wants Milk)"));
 
     // Organize Towel, give Milk grandma
     problem_expert_->setGoal(
       plansys2::Goal(
-        "(and(item_organized Towel) (no_grandma_chores))"));
+        "(and(item_organized Towel))"));
   }
 
   void step()

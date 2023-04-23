@@ -13,7 +13,7 @@
 ;; limitations under the License.
 
 (define (domain home-move)
-(:requirements :strips :typing :equality :durative-actions :disjunctive-preconditions :negative-preconditions)
+(:requirements :strips :typing :equality :durative-actions :negative-preconditions)
 
 ;; Types ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (:types
