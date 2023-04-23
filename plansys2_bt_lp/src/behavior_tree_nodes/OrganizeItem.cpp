@@ -17,7 +17,7 @@
 #include <vector>
 #include <memory>
 
-#include "plansys2_bt_lp/behavior_tree_nodes/Move.hpp"
+#include "plansys2_bt_lp/behavior_tree_nodes/OrganizeItem.hpp"
 
 #include "geometry_msgs/msg/pose2_d.hpp"
 #include "tf2_geometry_msgs/tf2_geometry_msgs.hpp"
@@ -29,7 +29,7 @@
 namespace plansys2_bt_lp
 {
 
-Move::Move(
+OrganizeItem::OrganizeItem(
   const std::string & xml_tag_name,
   const std::string & action_name,
   const BT::NodeConfiguration & conf)
@@ -72,7 +72,7 @@ Move::Move(
 }
 
 BT::NodeStatus
-Move::on_tick()
+OrganizeItem::on_tick()
 {
   if (status() == BT::NodeStatus::IDLE) {
     rclcpp_lifecycle::LifecycleNode::SharedPtr node;
@@ -104,7 +104,7 @@ Move::on_tick()
 }
 
 BT::NodeStatus
-Move::on_success()
+OrganizeItem::on_success()
 {
   return BT::NodeStatus::SUCCESS;
 }
@@ -118,10 +118,10 @@ BT_REGISTER_NODES(factory)
   BT::NodeBuilder builder =
     [](const std::string & name, const BT::NodeConfiguration & config)
     {
-      return std::make_unique<plansys2_bt_lp::Move>(
+      return std::make_unique<plansys2_bt_lp::OrganizeItem>(
         name, "navigate_to_pose", config);
     };
 
-  factory.registerBuilder<plansys2_bt_lp::Move>(
-    "Move", builder);
+  factory.registerBuilder<plansys2_bt_lp::OrganizeItem>(
+    "OrganizeItem", builder);
 }

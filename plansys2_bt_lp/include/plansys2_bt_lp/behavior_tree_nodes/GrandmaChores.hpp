@@ -12,36 +12,46 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#ifndef PLANSYS2_BT_LP__BEHAVIOR_TREE_NODES__APPROACHOBJECT_HPP_
-#define PLANSYS2_BT_LP__BEHAVIOR_TREE_NODES__APPROACHOBJECT_HPP_
+#ifndef PLANSYS2_BT_LP__BEHAVIOR_TREE_NODES__GRANDMACHORES_HPP_
+#define PLANSYS2_BT_LP__BEHAVIOR_TREE_NODES__GRANDMACHORES_HPP_
 
 #include <string>
+#include <map>
 
+#include "geometry_msgs/msg/pose2_d.hpp"
+#include "nav2_msgs/action/navigate_to_pose.hpp"
+
+#include "plansys2_bt_actions/BTActionNode.hpp"
 #include "behaviortree_cpp_v3/behavior_tree.h"
 #include "behaviortree_cpp_v3/bt_factory.h"
 
 namespace plansys2_bt_lp
 {
 
-class ApproachObject : public BT::ActionNodeBase
+class GrandmaChores : public plansys2::BtActionNode<
+    nav2_msgs::action::NavigateToPose>
 {
 public:
-  explicit ApproachObject(
+  explicit GrandmaChores(
     const std::string & xml_tag_name,
+    const std::string & action_name,
     const BT::NodeConfiguration & conf);
 
-  void halt();
-  BT::NodeStatus tick();
+  BT::NodeStatus on_tick() override;
+  BT::NodeStatus on_success() override;
 
   static BT::PortsList providedPorts()
   {
-    return BT::PortsList({});
+    return {
+      BT::InputPort<std::string>("goal")
+    };
   }
 
 private:
-  int counter_;
+  int goal_reached_;
+  std::map<std::string, geometry_msgs::msg::Pose2D> waypoints_;
 };
 
 }  // namespace plansys2_bt_lp
 
-#endif  // PLANSYS2_BT_LP_BEHAVIOR_TREE_NODES__APPROACHOBJECT_HPP_
+#endif  // PLANSYS2_BT_LP__BEHAVIOR_TREE_NODES__GRANDMACHORES_HPP_
