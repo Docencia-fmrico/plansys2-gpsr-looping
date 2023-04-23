@@ -76,7 +76,7 @@ def generate_launch_description():
             'bt_xml_file': example_dir + '/behavior_trees_xml/move.xml'
           }
         ])
-
+    
     item_for_grandma_cmd = Node(
         package='plansys2_bt_actions',
         executable='bt_action_node',
@@ -188,7 +188,7 @@ def generate_launch_description():
             'bt_xml_file': example_dir + '/behavior_trees_xml/request_open_door.xml'
           }
         ])
-
+    
     ld = LaunchDescription()
 
     ld.add_action(declare_namespace_cmd)
@@ -197,10 +197,11 @@ def generate_launch_description():
     ld.add_action(plansys2_cmd)
 
     ld.add_action(grandma_chores_cmd)
+    ld.add_action(move_cmd)
+
     ld.add_action(item_for_grandma_cmd)
     ld.add_action(organize_item_cmd)
     ld.add_action(open_door_cmd)
-    ld.add_action(move_cmd)
     ld.add_action(move_through_door_cmd)
     ld.add_action(drop_item_cmd)
     ld.add_action(pick_item_cmd)

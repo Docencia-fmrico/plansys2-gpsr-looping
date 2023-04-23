@@ -89,7 +89,7 @@
       )
 )
 
-(:durative-action organize-item
+(:durative-action organize_item
   :parameters (?to - location ?i - item)
   :duration (= ?duration 10)
   :condition 
@@ -108,7 +108,7 @@
       )
 )
 
-(:durative-action open-door
+(:durative-action open_door
   :parameters (?r - robot ?l1 ?l2 - location ?d - door)
   :duration(= ?duration 3)
   :condition 

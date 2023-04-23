@@ -39,32 +39,32 @@ set(dependencies
 
 include_directories(include)
 
-add_library(plansys2_dropitem_bt_node SHARED src/behavior_tree_nodes/DropItem.cpp)
-list(APPEND plugin_libs plansys2_dropitem_bt_node)
+add_library(plansys2_drop_item_bt_node SHARED src/behavior_tree_nodes/DropItem.cpp)
+list(APPEND plugin_libs plansys2_drop_item_bt_node)
 
 add_library(plansys2_move_bt_node SHARED src/behavior_tree_nodes/Move.cpp)
 list(APPEND plugin_libs plansys2_move_bt_node)
 
-add_library(plansys2_grandmachores_bt_node SHARED src/behavior_tree_nodes/GrandmaChores.cpp)
-list(APPEND plugin_libs plansys2_grandmachores_bt_node)
+add_library(plansys2_grandma_chores_bt_node SHARED src/behavior_tree_nodes/GrandmaChores.cpp)
+list(APPEND plugin_libs plansys2_grandma_chores_bt_node)
 
-add_library(plansys2_itemforgrandma_bt_node SHARED src/behavior_tree_nodes/ItemForGrandma.cpp)
-list(APPEND plugin_libs plansys2_itemforgrandma_bt_node)
+add_library(plansys2_item_for_grandma_bt_node SHARED src/behavior_tree_nodes/ItemForGrandma.cpp)
+list(APPEND plugin_libs plansys2_item_for_grandma_bt_node)
 
-add_library(plansys2_movethroughdoor_bt_node SHARED src/behavior_tree_nodes/MoveThroughDoor.cpp)
-list(APPEND plugin_libs plansys2_movethroughdoor_bt_node)
+add_library(plansys2_move_through_door_bt_node SHARED src/behavior_tree_nodes/MoveThroughDoor.cpp)
+list(APPEND plugin_libs plansys2_move_through_door_bt_node)
 
-add_library(plansys2_opendoor_bt_node SHARED src/behavior_tree_nodes/OpenDoor.cpp)
-list(APPEND plugin_libs plansys2_opendoor_bt_node)
+add_library(plansys2_open_door_bt_node SHARED src/behavior_tree_nodes/OpenDoor.cpp)
+list(APPEND plugin_libs plansys2_open_door_bt_node)
 
-add_library(plansys2_organizeitem_bt_node SHARED src/behavior_tree_nodes/OrganizeItem.cpp)
-list(APPEND plugin_libs plansys2_organizeitem_bt_node)
+add_library(plansys2_organize_item_bt_node SHARED src/behavior_tree_nodes/OrganizeItem.cpp)
+list(APPEND plugin_libs plansys2_organize_item_bt_node)
 
-add_library(plansys2_pickitem_bt_node SHARED src/behavior_tree_nodes/PickItem.cpp)
-list(APPEND plugin_libs plansys2_pickitem_bt_node)
+add_library(plansys2_pick_item_bt_node SHARED src/behavior_tree_nodes/PickItem.cpp)
+list(APPEND plugin_libs plansys2_pick_item_bt_node)
 
-add_library(plansys2_requestopendoor_bt_node SHARED src/behavior_tree_nodes/RequestOpenDoor.cpp)
-list(APPEND plugin_libs plansys2_requestopendoor_bt_node)
+add_library(plansys2_request_open_door_bt_node SHARED src/behavior_tree_nodes/RequestOpenDoor.cpp)
+list(APPEND plugin_libs plansys2_request_open_door_bt_node)
 
 foreach(bt_plugin ${plugin_libs})
   ament_target_dependencies(${bt_plugin} ${dependencies})
