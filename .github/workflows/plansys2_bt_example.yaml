@@ -1,4 +1,4 @@
-name: plansys2_bt_example
+name: plansys2_bt_lp
 
 on:
   pull_request:
@@ -27,8 +27,9 @@ jobs:
       - name: build and test
         uses: ros-tooling/action-ros-ci@0.2.5
         with:
-          package-name: plansys2_bt_example
+          package-name: plansys2_bt_lp
           target-ros2-distro: humble
           vcs-repo-file-url: /tmp/all.repos
           colcon-mixin-name: coverage-gcc
+          import-token: ${{ secrets.WORKFLOW_TOKEN }}
           colcon-mixin-repository: https://raw.githubusercontent.com/colcon/colcon-mixin-repository/master/index.yaml
