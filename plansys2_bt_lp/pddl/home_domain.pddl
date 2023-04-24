@@ -13,7 +13,7 @@
 ;; limitations under the License.
 
 (define (domain home-move)
-(:requirements :strips :typing :equality :durative-actions :disjunctive-preconditions :negative-preconditions)
+(:requirements :strips :typing :equality :durative-actions :negative-preconditions)
 
 ;; Types ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (:types
@@ -89,7 +89,7 @@
       )
 )
 
-(:durative-action organize-item
+(:durative-action organize_item
   :parameters (?to - location ?i - item)
   :duration (= ?duration 10)
   :condition 
@@ -108,9 +108,9 @@
       )
 )
 
-(:durative-action open-door
+(:durative-action open_door
   :parameters (?r - robot ?l1 ?l2 - location ?d - door)
-  :duration(= ?duration 3)
+  :duration(= ?duration 1)
   :condition 
     (and 
       (at start(close ?d))

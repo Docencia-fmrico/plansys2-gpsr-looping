@@ -12,46 +12,33 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include <string>
-#include <iostream>
+#ifndef PLANSYS2_BT_EXAMPLE__BEHAVIOR_TREE_NODES__GRANDMACHORES_HPP_
+#define PLANSYS2_BT_EXAMPLE__BEHAVIOR_TREE_NODES__GRANDMACHORES_HPP_
 
-#include "plansys2_bt_lp/behavior_tree_nodes/Recharge.hpp"
+#include <string>
 
 #include "behaviortree_cpp_v3/behavior_tree.h"
+#include "behaviortree_cpp_v3/bt_factory.h"
 
 namespace plansys2_bt_lp
 {
 
-Recharge::Recharge(
-  const std::string & xml_tag_name,
-  const BT::NodeConfiguration & conf)
-: BT::ActionNodeBase(xml_tag_name, conf), counter_(0)
+class GrandmaChores : public BT::ActionNodeBase
 {
-}
+public:
+  explicit GrandmaChores(
+    const std::string & xml_tag_name,
+    const BT::NodeConfiguration & conf);
 
-void
-Recharge::halt()
-{
-  std::cout << "Recharge halt" << std::endl;
-}
+  void halt();
+  BT::NodeStatus tick();
 
-BT::NodeStatus
-Recharge::tick()
-{
-  std::cout << "Recharge tick " << counter_ << std::endl;
-
-  if (counter_++ < 10) {
-    return BT::NodeStatus::RUNNING;
-  } else {
-    counter_ = 0;
-    return BT::NodeStatus::SUCCESS;
+  static BT::PortsList providedPorts()
+  {
+    return BT::PortsList({});
   }
-}
+};
 
 }  // namespace plansys2_bt_lp
 
-#include "behaviortree_cpp_v3/bt_factory.h"
-BT_REGISTER_NODES(factory)
-{
-  factory.registerNodeType<plansys2_bt_lp::Recharge>("Recharge");
-}
+#endif  // PLANSYS2_BT_EXAMPLE__BEHAVIOR_TREE_NODES__GRANDMACHORES_HPP_

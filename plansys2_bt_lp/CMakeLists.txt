@@ -39,28 +39,37 @@ set(dependencies
 
 include_directories(include)
 
-add_library(plansys2_recharge_bt_node SHARED src/behavior_tree_nodes/Recharge.cpp)
-list(APPEND plugin_libs plansys2_recharge_bt_node)
-
-add_library(plansys2_close_gripper_bt_node SHARED src/behavior_tree_nodes/CloseGripper.cpp)
-list(APPEND plugin_libs plansys2_close_gripper_bt_node)
-
-add_library(plansys2_open_gripper_bt_node SHARED src/behavior_tree_nodes/OpenGripper.cpp)
-list(APPEND plugin_libs plansys2_open_gripper_bt_node)
+add_library(plansys2_drop_item_bt_node SHARED src/behavior_tree_nodes/DropItem.cpp)
+list(APPEND plugin_libs plansys2_drop_item_bt_node)
 
 add_library(plansys2_move_bt_node SHARED src/behavior_tree_nodes/Move.cpp)
 list(APPEND plugin_libs plansys2_move_bt_node)
 
-add_library(plansys2_approach_object_bt_node SHARED src/behavior_tree_nodes/ApproachObject.cpp)
-list(APPEND plugin_libs plansys2_approach_object_bt_node)
+add_library(plansys2_grandma_chores_bt_node SHARED src/behavior_tree_nodes/GrandmaChores.cpp)
+list(APPEND plugin_libs plansys2_grandma_chores_bt_node)
+
+add_library(plansys2_item_for_grandma_bt_node SHARED src/behavior_tree_nodes/ItemForGrandma.cpp)
+list(APPEND plugin_libs plansys2_item_for_grandma_bt_node)
+
+add_library(plansys2_move_through_door_bt_node SHARED src/behavior_tree_nodes/MoveThroughDoor.cpp)
+list(APPEND plugin_libs plansys2_move_through_door_bt_node)
+
+add_library(plansys2_open_door_bt_node SHARED src/behavior_tree_nodes/OpenDoor.cpp)
+list(APPEND plugin_libs plansys2_open_door_bt_node)
+
+add_library(plansys2_organize_item_bt_node SHARED src/behavior_tree_nodes/OrganizeItem.cpp)
+list(APPEND plugin_libs plansys2_organize_item_bt_node)
+
+add_library(plansys2_pick_item_bt_node SHARED src/behavior_tree_nodes/PickItem.cpp)
+list(APPEND plugin_libs plansys2_pick_item_bt_node)
+
+add_library(plansys2_request_open_door_bt_node SHARED src/behavior_tree_nodes/RequestOpenDoor.cpp)
+list(APPEND plugin_libs plansys2_request_open_door_bt_node)
 
 foreach(bt_plugin ${plugin_libs})
   ament_target_dependencies(${bt_plugin} ${dependencies})
   target_compile_definitions(${bt_plugin} PRIVATE BT_PLUGIN_EXPORT)
 endforeach()
-
-add_executable(assemble_action_node src/assemble_action_node.cpp)
-ament_target_dependencies(assemble_action_node ${dependencies})
 
 add_executable(grandma_controller_node src/grandma_controller_node.cpp)
 ament_target_dependencies(grandma_controller_node ${dependencies})
@@ -71,7 +80,6 @@ ament_target_dependencies(nav2_sim_node ${dependencies})
 install(DIRECTORY launch pddl behavior_trees_xml config DESTINATION share/${PROJECT_NAME})
 
 install(TARGETS
-  assemble_action_node
   grandma_controller_node
   nav2_sim_node
   ${plugin_libs}

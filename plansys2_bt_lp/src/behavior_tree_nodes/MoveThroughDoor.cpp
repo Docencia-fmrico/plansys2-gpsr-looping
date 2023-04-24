@@ -15,37 +15,31 @@
 #include <string>
 #include <iostream>
 
-#include "plansys2_bt_lp/behavior_tree_nodes/ApproachObject.hpp"
+#include "plansys2_bt_lp/behavior_tree_nodes/MoveThroughDoor.hpp"
 
 #include "behaviortree_cpp_v3/behavior_tree.h"
 
 namespace plansys2_bt_lp
 {
 
-ApproachObject::ApproachObject(
+MoveThroughDoor::MoveThroughDoor(
   const std::string & xml_tag_name,
   const BT::NodeConfiguration & conf)
-: BT::ActionNodeBase(xml_tag_name, conf), counter_(0)
+: BT::ActionNodeBase(xml_tag_name, conf)
 {
 }
 
 void
-ApproachObject::halt()
+MoveThroughDoor::halt()
 {
-  std::cout << "ApproachObject halt" << std::endl;
+  std::cout << "MoveThroughDoor halt" << std::endl;
 }
 
 BT::NodeStatus
-ApproachObject::tick()
+MoveThroughDoor::tick()
 {
-  std::cout << "ApproachObject tick " << counter_ << std::endl;
-
-  if (counter_++ < 5) {
-    return BT::NodeStatus::RUNNING;
-  } else {
-    counter_ = 0;
-    return BT::NodeStatus::SUCCESS;
-  }
+  std::cout << "MoveThroughDoor Tick" << std::endl;
+  return BT::NodeStatus::SUCCESS;
 }
 
 }  // namespace plansys2_bt_lp
@@ -53,5 +47,5 @@ ApproachObject::tick()
 #include "behaviortree_cpp_v3/bt_factory.h"
 BT_REGISTER_NODES(factory)
 {
-  factory.registerNodeType<plansys2_bt_lp::ApproachObject>("ApproachObject");
+  factory.registerNodeType<plansys2_bt_lp::MoveThroughDoor>("MoveThroughDoor");
 }

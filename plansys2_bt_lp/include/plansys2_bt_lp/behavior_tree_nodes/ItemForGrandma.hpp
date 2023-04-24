@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#ifndef PLANSYS2_BT_LP__BEHAVIOR_TREE_NODES__CLOSEGRIPPER_HPP_
-#define PLANSYS2_BT_LP__BEHAVIOR_TREE_NODES__CLOSEGRIPPER_HPP_
+#ifndef PLANSYS2_BT_EXAMPLE__BEHAVIOR_TREE_NODES__ITEMFORGRANDMA_HPP_
+#define PLANSYS2_BT_EXAMPLE__BEHAVIOR_TREE_NODES__ITEMFORGRANDMA_HPP_
 
 #include <string>
 
@@ -23,10 +23,10 @@
 namespace plansys2_bt_lp
 {
 
-class CloseGripper : public BT::ActionNodeBase
+class ItemForGrandma : public BT::ActionNodeBase
 {
 public:
-  explicit CloseGripper(
+  explicit ItemForGrandma(
     const std::string & xml_tag_name,
     const BT::NodeConfiguration & conf);
 
@@ -37,11 +37,8 @@ public:
   {
     return BT::PortsList({});
   }
-
-private:
-  int counter_;
 };
 
 }  // namespace plansys2_bt_lp
 
-#endif  // PLANSYS2_BT_LP__BEHAVIOR_TREE_NODES__CLOSEGRIPPER_HPP_
+#endif  // PLANSYS2_BT_EXAMPLE__BEHAVIOR_TREE_NODES__ITEMFORGRANDMA_HPP_

@@ -1,88 +1,146 @@
-move_1:
+move:
   ros__parameters:
     plugins:
       - plansys2_move_bt_node
-    waypoints: ["wheels_zone", "steering_wheels_zone", "body_car_zone", "assembly_zone", "recharge_zone"]
+    waypoints: ["Garage", "yard", "Kitchen", "Livingroom", "Bathroom", "Guest_Bedroom", "Grandma_Bedroom", "Outside", "Corridor"]
     waypoint_coords:
-      wheels_zone: [0.0, -2.0, 0.0]
-      steering_wheels_zone: [1.8, 0.0, 0.0]
-      body_car_zone: [0.0, 2.0, 0.0]
-      assembly_zone: [-2.0, -0.4, 0.0]
-      recharge_zone: [-2.0, -0.4, 0.0]
-move_2:
-  ros__parameters:
-    plugins:
-      - plansys2_move_bt_node
-    waypoints: ["wheels_zone", "steering_wheels_zone", "body_car_zone", "assembly_zone", "recharge_zone"]
-    waypoint_coords:
-      wheels_zone: [0.0, -2.0, 0.0]
-      steering_wheels_zone: [1.8, 0.0, 0.0]
-      body_car_zone: [0.0, 2.0, 0.0]
-      assembly_zone: [-2.0, -0.4, 0.0]
-      recharge_zone: [-2.0, -0.4, 0.0]
-move_3:
-  ros__parameters:
-    plugins:
-      - plansys2_move_bt_node
-    waypoints: ["wheels_zone", "steering_wheels_zone", "body_car_zone", "assembly_zone", "recharge_zone"]
-    waypoint_coords:
-      wheels_zone: [0.0, -2.0, 0.0]
-      steering_wheels_zone: [1.8, 0.0, 0.0]
-      body_car_zone: [0.0, 2.0, 0.0]
-      assembly_zone: [-2.0, -0.4, 0.0]
-      recharge_zone: [-2.0, -0.4, 0.0]
-transport_1:
-  ros__parameters:
-    plugins:
-      - plansys2_close_gripper_bt_node
-      - plansys2_open_gripper_bt_node
-      - plansys2_move_bt_node
-      - plansys2_approach_object_bt_node
-    waypoints: ["wheels_zone", "steering_wheels_zone", "body_car_zone", "assembly_zone", "recharge_zone"]
-    waypoint_coords:
-      wheels_zone: [0.0, -2.0, 0.0]
-      steering_wheels_zone: [1.8, 0.0, 0.0]
-      body_car_zone: [0.0, 2.0, 0.0]
-      assembly_zone: [-2.0, -0.4, 0.0]
-      recharge_zone: [-2.0, -0.4, 0.0]
-transport_2:
-  ros__parameters:
-    plugins:
-      - plansys2_close_gripper_bt_node
-      - plansys2_open_gripper_bt_node
-      - plansys2_move_bt_node
-      - plansys2_approach_object_bt_node
-    waypoints: ["wheels_zone", "steering_wheels_zone", "body_car_zone", "assembly_zone", "recharge_zone"]
-    waypoint_coords:
-      wheels_zone: [0.0, -2.0, 0.0]
-      steering_wheels_zone: [1.8, 0.0, 0.0]
-      body_car_zone: [0.0, 2.0, 0.0]
-      assembly_zone: [-2.0, -0.4, 0.0]
-      recharge_zone: [-2.0, -0.4, 0.0]
-transport_3:
-  ros__parameters:
-    plugins:
-      - plansys2_close_gripper_bt_node
-      - plansys2_open_gripper_bt_node
-      - plansys2_move_bt_node
-      - plansys2_approach_object_bt_node
-    waypoints: ["wheels_zone", "steering_wheels_zone", "body_car_zone", "assembly_zone", "recharge_zone"]
-    waypoint_coords:
-      wheels_zone: [0.0, -2.0, 0.0]
-      steering_wheels_zone: [1.8, 0.0, 0.0]
-      body_car_zone: [0.0, 2.0, 0.0]
-      assembly_zone: [-2.0, -0.4, 0.0]
-      recharge_zone: [-2.0, -0.4, 0.0]
-recharge_1:
-  ros__parameters:
-    plugins:
-      - plansys2_recharge_bt_node
-recharge_2:
-  ros__parameters:
-    plugins:
-      - plansys2_recharge_bt_node
+      Garage: [0.0, 0.0, 0.0]
+      yard: [0.0, -2.0, 0.0]
+      Kitchen: [0.0, -3.0, 0.0]
+      Livingroom: [0.0, -4.0, 0.0]
+      Bathroom: [0.0, -5.0, 1.0]
+      Guest_Bedroom: [2.0, -6.0, 0.0]
+      Grandma_Bedroom: [5.0, -0.0, 0.0]
+      Outside: [1.0, -2.0, 0.0]
+      Corridor: [0.0, -2.0, -3.0]
 
-recharge_3:
+drop_item:
   ros__parameters:
     plugins:
-      - plansys2_recharge_bt_node
+      - plansys2_drop_item_bt_node
+    waypoints: [Garage", "yard", "Kitchen", "Livingroom", "Bathroom", "Guest_Bedroom", "Grandma_Bedroom", "Outside", "Corridor"]
+    waypoint_coords:
+      Garage: [0.0, 0.0, 0.0]
+      yard: [0.0, -2.0, 0.0]
+      Kitchen: [0.0, -3.0, 0.0]
+      Livingroom: [0.0, -4.0, 0.0]
+      Bathroom: [0.0, -5.0, 1.0]
+      Guest_Bedroom: [2.0, -6.0, 0.0]
+      Grandma_Bedroom: [5.0, -0.0, 0.0]
+      Outside: [1.0, -2.0, 0.0]
+      Corridor: [0.0, -2.0, -3.0]
+
+grandma_chores:
+  ros__parameters:
+    plugins:
+      - plansys2_grandma_chores_bt_node
+    waypoints: [Garage", "yard", "Kitchen", "Livingroom", "Bathroom", "Guest_Bedroom", "Grandma_Bedroom", "Outside", "Corridor"]
+    waypoint_coords:
+      Garage: [0.0, 0.0, 0.0]
+      yard: [0.0, -2.0, 0.0]
+      Kitchen: [0.0, -3.0, 0.0]
+      Livingroom: [0.0, -4.0, 0.0]
+      Bathroom: [0.0, -5.0, 1.0]
+      Guest_Bedroom: [2.0, -6.0, 0.0]
+      Grandma_Bedroom: [5.0, -0.0, 0.0]
+      Outside: [1.0, -2.0, 0.0]
+      Corridor: [0.0, -2.0, -3.0]
+
+item_for_grandma:
+  ros__parameters:
+    plugins:
+      - plansys2_item_for_grandma_bt_node
+    waypoints: [Garage", "yard", "Kitchen", "Livingroom", "Bathroom", "Guest_Bedroom", "Grandma_Bedroom", "Outside", "Corridor"]
+    waypoint_coords:
+      Garage: [0.0, 0.0, 0.0]
+      yard: [0.0, -2.0, 0.0]
+      Kitchen: [0.0, -3.0, 0.0]
+      Livingroom: [0.0, -4.0, 0.0]
+      Bathroom: [0.0, -5.0, 1.0]
+      Guest_Bedroom: [2.0, -6.0, 0.0]
+      Grandma_Bedroom: [5.0, -0.0, 0.0]
+      Outside: [1.0, -2.0, 0.0]
+      Corridor: [0.0, -2.0, -3.0]
+
+move_through_door:
+  ros__parameters:
+    plugins:
+      - plansys2_move_through_door_bt_node
+    waypoints: [Garage", "yard", "Kitchen", "Livingroom", "Bathroom", "Guest_Bedroom", "Grandma_Bedroom", "Outside", "Corridor"]
+    waypoint_coords:
+      Garage: [0.0, 0.0, 0.0]
+      yard: [0.0, -2.0, 0.0]
+      Kitchen: [0.0, -3.0, 0.0]
+      Livingroom: [0.0, -4.0, 0.0]
+      Bathroom: [0.0, -5.0, 1.0]
+      Guest_Bedroom: [2.0, -6.0, 0.0]
+      Grandma_Bedroom: [5.0, -0.0, 0.0]
+      Outside: [1.0, -2.0, 0.0]
+      Corridor: [0.0, -2.0, -3.0]
+
+
+open_door:
+  ros__parameters:
+    plugins:
+      - plansys2_open_door_bt_node
+    waypoints: [Garage", "yard", "Kitchen", "Livingroom", "Bathroom", "Guest_Bedroom", "Grandma_Bedroom", "Outside", "Corridor"]
+    waypoint_coords: 
+      Garage: [0.0, 0.0, 0.0]
+      yard: [0.0, -2.0, 0.0]
+      Kitchen: [0.0, -3.0, 0.0]
+      Livingroom: [0.0, -4.0, 0.0]
+      Bathroom: [0.0, -5.0, 1.0]
+      Guest_Bedroom: [2.0, -6.0, 0.0]
+      Grandma_Bedroom: [5.0, -0.0, 0.0]
+      Outside: [1.0, -2.0, 0.0]
+      Corridor: [0.0, -2.0, -3.0]
+
+organize_item:
+  ros__parameters:
+    plugins:
+      - plansys2_organize_item_bt_node
+    waypoints: [Garage", "yard", "Kitchen", "Livingroom", "Bathroom", "Guest_Bedroom", "Grandma_Bedroom", "Outside", "Corridor"]
+    waypoint_coords:
+      Garage: [0.0, 0.0, 0.0]
+      yard: [0.0, -2.0, 0.0]
+      Kitchen: [0.0, -3.0, 0.0]
+      Livingroom: [0.0, -4.0, 0.0]
+      Bathroom: [0.0, -5.0, 1.0]
+      Guest_Bedroom: [2.0, -6.0, 0.0]
+      Grandma_Bedroom: [5.0, -0.0, 0.0]
+      Outside: [1.0, -2.0, 0.0]
+      Corridor: [0.0, -2.0, -3.0]
+
+pick_item:
+  ros__parameters:
+    plugins:
+      - plansys2_pick_item_bt_node
+    waypoints: [Garage", "yard", "Kitchen", "Livingroom", "Bathroom", "Guest_Bedroom", "Grandma_Bedroom", "Outside", "Corridor"]
+    waypoint_coords:
+      Garage: [0.0, 0.0, 0.0]
+      yard: [0.0, -2.0, 0.0]
+      Kitchen: [0.0, -3.0, 0.0]
+      Livingroom: [0.0, -4.0, 0.0]
+      Bathroom: [0.0, -5.0, 1.0]
+      Guest_Bedroom: [2.0, -6.0, 0.0]
+      Grandma_Bedroom: [5.0, -0.0, 0.0]
+      Outside: [1.0, -2.0, 0.0]
+      Corridor: [0.0, -2.0, -3.0]
+
+request_open_door:
+  ros__parameters:
+    plugins:
+      - plansys2_request_open_door_bt_node
+    waypoints: [Garage", "yard", "Kitchen", "Livingroom", "Bathroom", "Guest_Bedroom", "Grandma_Bedroom", "Outside", "Corridor"]
+    waypoint_coords: 
+      Garage: [0.0, 0.0, 0.0]
+      yard: [0.0, -2.0, 0.0]
+      Kitchen: [0.0, -3.0, 0.0]
+      Livingroom: [0.0, -4.0, 0.0]
+      Bathroom: [0.0, -5.0, 1.0]
+      Guest_Bedroom: [2.0, -6.0, 0.0]
+      Grandma_Bedroom: [5.0, -0.0, 0.0]
+      Outside: [1.0, -2.0, 0.0]
+      Corridor: [0.0, -2.0, -3.0]
+
+

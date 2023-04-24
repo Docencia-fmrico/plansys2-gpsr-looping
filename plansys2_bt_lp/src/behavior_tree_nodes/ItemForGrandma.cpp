@@ -12,36 +12,40 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#ifndef PLANSYS2_BT_LP__BEHAVIOR_TREE_NODES__APPROACHOBJECT_HPP_
-#define PLANSYS2_BT_LP__BEHAVIOR_TREE_NODES__APPROACHOBJECT_HPP_
-
 #include <string>
+#include <iostream>
+
+#include "plansys2_bt_lp/behavior_tree_nodes/ItemForGrandma.hpp"
 
 #include "behaviortree_cpp_v3/behavior_tree.h"
-#include "behaviortree_cpp_v3/bt_factory.h"
 
 namespace plansys2_bt_lp
 {
 
-class ApproachObject : public BT::ActionNodeBase
+ItemForGrandma::ItemForGrandma(
+  const std::string & xml_tag_name,
+  const BT::NodeConfiguration & conf)
+: BT::ActionNodeBase(xml_tag_name, conf)
 {
-public:
-  explicit ApproachObject(
-    const std::string & xml_tag_name,
-    const BT::NodeConfiguration & conf);
+}
 
-  void halt();
-  BT::NodeStatus tick();
+void
+ItemForGrandma::halt()
+{
+  std::cout << "ItemForGrandma halt" << std::endl;
+}
 
-  static BT::PortsList providedPorts()
-  {
-    return BT::PortsList({});
-  }
-
-private:
-  int counter_;
-};
+BT::NodeStatus
+ItemForGrandma::tick()
+{
+  std::cout << "ItemForGrandma Tick" << std::endl;
+  return BT::NodeStatus::SUCCESS;
+}
 
 }  // namespace plansys2_bt_lp
 
-#endif  // PLANSYS2_BT_LP_BEHAVIOR_TREE_NODES__APPROACHOBJECT_HPP_
+#include "behaviortree_cpp_v3/bt_factory.h"
+BT_REGISTER_NODES(factory)
+{
+  factory.registerNodeType<plansys2_bt_lp::ItemForGrandma>("ItemForGrandma");
+}
