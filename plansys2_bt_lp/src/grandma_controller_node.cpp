@@ -27,11 +27,11 @@
 #include "rclcpp/rclcpp.hpp"
 #include "rclcpp_action/rclcpp_action.hpp"
 
-class Assemble : public rclcpp::Node
+class Grandma : public rclcpp::Node
 {
 public:
-  Assemble()
-  : rclcpp::Node("assembling_controller")
+  Grandma()
+  : rclcpp::Node("grandma_controller")
   {
   }
 
@@ -64,108 +64,110 @@ public:
 
   void init_knowledge()
   {
-    problem_expert_->addInstance(plansys2::Instance{"Kitchen", "room"});
-    problem_expert_->addInstance(plansys2::Instance{"Bathroom", "room"});
-    problem_expert_->addInstance(plansys2::Instance{"Grandma_Bedroom", "room"});
-    problem_expert_->addInstance(plansys2::Instance{"Guest_Bedroom", "room"});
-    problem_expert_->addInstance(plansys2::Instance{"Garage", "room"});
-    problem_expert_->addInstance(plansys2::Instance{"Livingroom", "room"});
-    problem_expert_->addInstance(plansys2::Instance{"Yard", "room"});
-    problem_expert_->addInstance(plansys2::Instance{"Outside", "room"});
+    std::cout << "INIT KNOWLEDGE" << std::endl;
+    problem_expert_->addInstance(plansys2::Instance{"kitchen", "room"});
+    problem_expert_->addInstance(plansys2::Instance{"bathroom", "room"});
+    problem_expert_->addInstance(plansys2::Instance{"grandma_bedroom", "room"});
+    problem_expert_->addInstance(plansys2::Instance{"guest_bedroom", "room"});
+    problem_expert_->addInstance(plansys2::Instance{"garage", "room"});
+    problem_expert_->addInstance(plansys2::Instance{"livingroom", "room"});
+    problem_expert_->addInstance(plansys2::Instance{"yard", "room"});
+    problem_expert_->addInstance(plansys2::Instance{"outside", "room"});
 
-    problem_expert_->addInstance(plansys2::Instance{"Corridor", "corridor"});
+    problem_expert_->addInstance(plansys2::Instance{"corridor", "corridor"});
 
-    problem_expert_->addInstance(plansys2::Instance{"Door1", "door"});
-    problem_expert_->addInstance(plansys2::Instance{"Door2", "door"});
-    problem_expert_->addInstance(plansys2::Instance{"Door3", "door"});
-    problem_expert_->addInstance(plansys2::Instance{"Door4", "door"});
-    problem_expert_->addInstance(plansys2::Instance{"Door5", "door"});
-    problem_expert_->addInstance(plansys2::Instance{"Door6", "door"});
-    problem_expert_->addInstance(plansys2::Instance{"Door7", "door"});
-    problem_expert_->addInstance(plansys2::Instance{"Door8", "door"});
+    problem_expert_->addInstance(plansys2::Instance{"door1", "door"});
+    problem_expert_->addInstance(plansys2::Instance{"door2", "door"});
+    problem_expert_->addInstance(plansys2::Instance{"door3", "door"});
+    problem_expert_->addInstance(plansys2::Instance{"door4", "door"});
+    problem_expert_->addInstance(plansys2::Instance{"door5", "door"});
+    problem_expert_->addInstance(plansys2::Instance{"door6", "door"});
+    problem_expert_->addInstance(plansys2::Instance{"door7", "door"});
+    problem_expert_->addInstance(plansys2::Instance{"door8", "door"});
 
-    problem_expert_->addInstance(plansys2::Instance{"Loopy", "robot"});
+    problem_expert_->addInstance(plansys2::Instance{"loopy", "robot"});
 
-    problem_expert_->addInstance(plansys2::Instance{"Gm", "grandma"});
+    problem_expert_->addInstance(plansys2::Instance{"gm", "grandma"});
 
-    problem_expert_->addInstance(plansys2::Instance{"Towel", "item"});
-    problem_expert_->addInstance(plansys2::Instance{"Cutlery", "item"});
-    problem_expert_->addInstance(plansys2::Instance{"Tools", "item"});
-    problem_expert_->addInstance(plansys2::Instance{"Clothes", "item"});
-    problem_expert_->addInstance(plansys2::Instance{"Plants", "item"});
-    problem_expert_->addInstance(plansys2::Instance{"Magazines", "item"});
-    problem_expert_->addInstance(plansys2::Instance{"Milk", "item"});
-    problem_expert_->addInstance(plansys2::Instance{"Pills", "item"});
-    problem_expert_->addInstance(plansys2::Instance{"Bed", "item"});
+    problem_expert_->addInstance(plansys2::Instance{"towel", "item"});
+    problem_expert_->addInstance(plansys2::Instance{"cutlery", "item"});
+    problem_expert_->addInstance(plansys2::Instance{"tools", "item"});
+    problem_expert_->addInstance(plansys2::Instance{"clothes", "item"});
+    problem_expert_->addInstance(plansys2::Instance{"plants", "item"});
+    problem_expert_->addInstance(plansys2::Instance{"magazines", "item"});
+    problem_expert_->addInstance(plansys2::Instance{"milk", "item"});
+    problem_expert_->addInstance(plansys2::Instance{"pills", "item"});
+    problem_expert_->addInstance(plansys2::Instance{"bed", "item"});
 
-    // Robot
-    problem_expert_->addPredicate(plansys2::Predicate("(robot_at Loopy Livingroom)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(robot_free Loopy)"));
+    // // Robot
+    problem_expert_->addPredicate(plansys2::Predicate("(robot_at loopy livingroom)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(robot_free loopy)"));
 
-    // House dimension && connection
+    // // House dimension && connection
+    problem_expert_->addPredicate(plansys2::Predicate("(connected_door livingroom corridor door3)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(connected_door kitchen corridor door4)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(connected_door bathroom livingroom door2)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(connected_door yard corridor door6)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(connected_door garage corridor door8)"));
+    problem_expert_->addPredicate(
+      plansys2::Predicate(
+        "(connected_door grandma_bedroom corridor door7)"));
+    problem_expert_->addPredicate(
+      plansys2::Predicate(
+        "(connected_door guest_bedroom corridor door5)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(connected_door corridor livingroom door3)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(connected_door corridor kitchen door4)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(connected_door livingroom bathroom door2)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(connected_door corridor yard door6)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(connected_door corridor garage door8)"));
     problem_expert_->addPredicate
-    (plansys2::Predicate("(connected_door Livingroom Corridor Door3)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(connected_door Kitchen Corridor Door4)"));
+      (plansys2::Predicate(
+        "(connected_door corridor grandma_bedroom door7)"));
     problem_expert_->addPredicate
-    (plansys2::Predicate("(connected_door Bathroom Livingroom Door2)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(connected_door Yard Corridor Door6)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(connected_door Garage Corridor Door8)"));
-    problem_expert_->addPredicate
-    (plansys2::Predicate("(connected_door Grandma_Bedroom Corridor Door7)"));
-    problem_expert_->addPredicate
-    (plansys2::Predicate("(connected_door Guest_Bedroom Corridor Door5)"));
-    problem_expert_->addPredicate
-    (plansys2::Predicate("(connected_door COrridor Livingroom Door3)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(connected_door Corridor Kitchen Door4)"));
-    problem_expert_->addPredicate
-    (plansys2::Predicate("(connected_door Livingroom Bathroom Door2)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(connected_door Corridor Yard Door6)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(connected_door Corridor Garage Door8)"));
-    problem_expert_->addPredicate
-    (plansys2::Predicate("(connected_door Corridor Grandma_Bedroom Door7)"));
-    problem_expert_->addPredicate
-    (plansys2::Predicate("(connected_door Corrior Guest_Bedroom Door5)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(connected_door Outside Livingroom Door1)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(connected_door Livingroom Outside Door1)"));
+      (plansys2::Predicate(
+        "(connected_door corridor guest_bedroom door5)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(connected_door outside livingroom door1)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(connected_door livingroom outside door1)"));
 
-    problem_expert_->addPredicate(plansys2::Predicate("(close Door1)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(close Door2)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(close Door3)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(close Door4)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(close Door5)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(close Door6)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(close Door7)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(close Door8)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(close door1)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(close door2)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(close door3)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(close door4)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(close door5)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(close door6)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(close door7)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(close door8)"));
 
-    problem_expert_->addPredicate(plansys2::Predicate("(grandma_at Gm Grandma_Bedroom)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(grandma_at gm grandma_bedroom)"));
 
-    // Objects to be organized
-    problem_expert_->addPredicate(plansys2::Predicate("(item_at Towel Grandma_Bedroom)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(item_at Cutlery Kitchen)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(item_at Tools Kitchen)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(item_at Clothes Yard)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(item_at Plants Yard)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(item_at Magazines Livingroom)"));
+    // // Objects to be organized
+    problem_expert_->addPredicate(plansys2::Predicate("(item_at towel grandma_bedroom)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(item_at cutlery kitchen)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(item_at tools kitchen)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(item_at clothes yard)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(item_at plants yard)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(item_at magazines livingroom)"));
 
     // Objects used for grandma priorities
-    problem_expert_->addPredicate(plansys2::Predicate("(item_at Milk Kitchen)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(item_at Pills Livingroom)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(item_at Bed Guest_Bedroom)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(item_at milk kitchen)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(item_at pills livingroom)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(item_at bed guest_bedroom)"));
 
-    // Organize the following objects
-    problem_expert_->addPredicate(plansys2::Predicate("(item_should be Towel Bathroom)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(item_disorganized Towel)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(item_should_be Tools Garage)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(item_disorganized Tools)"));
+    // // Organize the following objects
+    problem_expert_->addPredicate(plansys2::Predicate("(item_should_be towel bathroom)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(item_disorganized towel)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(item_should_be tools garage)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(item_disorganized tools)"));
 
-    // Grandma chores
-    problem_expert_->addPredicate(plansys2::Predicate("(grandma_get_open_door)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(grandma_wants Milk)"));
+    // // Grandma chores
+    //problem_expert_->addPredicate(plansys2::Predicate("(grandma_get_open_door)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(grandma_wants milk)"));
 
-    // Organize Towel, give Milk grandma
+    // Organize towel, give milk grandma
     problem_expert_->setGoal(
       plansys2::Goal(
-        "(and(item_organized Towel) (no_grandma_chores))"));
+        "(and(item_at cutlery livingroom))"));
+    std::cout << "END KNOWLEDGE" << std::endl;
   }
 
   void step()
@@ -191,7 +193,7 @@ private:
 int main(int argc, char ** argv)
 {
   rclcpp::init(argc, argv);
-  auto node = std::make_shared<Assemble>();
+  auto node = std::make_shared<Grandma>();
 
   if (!node->init()) {
     return 0;
