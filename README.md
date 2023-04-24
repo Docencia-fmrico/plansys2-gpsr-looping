@@ -16,7 +16,7 @@
 
 We have created a [PDDL](https://planning.wiki/) domain and six PDDL problems that will be solved using [POPF](https://planning.wiki/ref/planners/popf) and [Plansys2](https://plansys2.github.io/) implemented in ros2. The problem represents a house with different items and a grandma that will ask the robot to do some of the chores for her. We will solve the problem in the gazebo simulator with the robot tiago.
 
-## What-is-PDDL?
+## What is PDDL?
 
 Planning Domain Definition Language (PDDL) is a family of languages which allow us to define a planning problem. As planning has evolved, so to has the language used to describe it and as such there are now many versions of PDDL available.
 
@@ -24,9 +24,13 @@ In our case, we define a set of objects which have predicate properties (propert
 
 <a href="https://planning.wiki/guide/whatis/pddl" target="Resource Information">Resource Information</a>
 
-## What-is-Plansys2?
+## What is Plansys2?
 
 ROS2 Planning System (plansys2 in short) is a project whose objective is to provide Robotics developers with a reliable, simple, and efficient PDDL-based planning system. It is implemented in ROS2, applying the latest concepts developed in this currently de-facto standard in Robotics.
+
+<p align="center">
+   <img src="https://github.com/Docencia-fmrico/plansys2-gpsr-looping/blob/origin/Readme/images/plansys2.png" width="70%" height="70%">
+</p>
 
 PlanSys2 has a modular design. It is basically composed of 4 nodes:
 * Domain Expert: Contains the PDDL model information (types, predicates, functions, and actions).
@@ -40,6 +44,10 @@ For more information visit the <a href="https://plansys2.github.io/design/index.
 
 ## Map
 Here you can see the map we have used for handling this exercise: 
+<p align="center">
+   <img src="https://github.com/Docencia-fmrico/plansys2-gpsr-looping/blob/origin/Readme/images/map.jpg" width="80%" height="80%">
+</p>
+We also created a gazebo world to be able to do this exercise:
 
 ## License
 
