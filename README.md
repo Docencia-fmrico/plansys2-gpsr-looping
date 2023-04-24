@@ -8,13 +8,9 @@
 ## Summary
 1. [Overview](#Overview)
 2. [What is PDDL?](#What-is-PDDL?)
-3. [Map](#Map)
-4. [Objects Organized](#Objects-Organized)
-5. [Grandma Priorities](#Grandma-Priorities)
-6. [Domain](#Domain)
-7. [Problems](#Problems)
-8. [Running the program](#Run-the-program)
-10. [License](#License)
+3. [What is Plansys2?](#What-is-Plansys2?)
+4. [Map](#Map)
+5. [License](#License)
 
 ## Overview
 
@@ -22,17 +18,29 @@ We have created a [PDDL](https://planning.wiki/) domain and six PDDL problems th
 
 ## What-is-PDDL?
 
-Ejercicio 4 de Planificación y Sistemas Cognitivos 2023
+Planning Domain Definition Language (PDDL) is a family of languages which allow us to define a planning problem. As planning has evolved, so to has the language used to describe it and as such there are now many versions of PDDL available.
 
-En grupos de 4, haced una aplicación en ROS 2 usando PlanSys2 que use el dominio de la [Práctica 3](https://github.com/Docencia-fmrico/planning-exercise/blob/main/README.md). El robot debe poder realizar en un simulador, navegando con Nav2, goals similares a los siguientes:
+In our case, we define a set of objects which have predicate properties (properties which are either true or false). Therefore, we define a set of actions which condition on, and then change these properties. We use logic expressions such as: and, or, not and we have introduced two key elements. Besides, we use time and numbers. We have learnt up to PDDL 2.1 version.
 
-(ordena_casa robot1)
-(abrir_puerta puerta_principal)
-(dar robot1 vaso_leche abuelita)
-(dar robot1 medicina abuelita)
+<a href="https://planning.wiki/guide/whatis/pddl" target="Resource Information">Resource Information</a>
 
-Puntuación (sobre 10):   
-* +5 correcto funcionamiento en el robot simulado.
-* +2 Readme.md bien documentado con videos.
-* +2 CI con Test de los nodos BT
-* -3 Warnings o que no pase los tests.
+## What-is-Plansys2?
+
+ROS2 Planning System (plansys2 in short) is a project whose objective is to provide Robotics developers with a reliable, simple, and efficient PDDL-based planning system. It is implemented in ROS2, applying the latest concepts developed in this currently de-facto standard in Robotics.
+
+PlanSys2 has a modular design. It is basically composed of 4 nodes:
+* Domain Expert: Contains the PDDL model information (types, predicates, functions, and actions).
+* Problem Expert: Contains the current instances, predicates, functions, and goals that compose the model.
+* Planner: Generates plans (sequence of actions) using the information contained in the Domain and Problem Experts.
+* Executor: Takes a plan and executes it by activating the action performers (the ROS2 nodes that implement each action).
+
+Each of these nodes exposes its functionality using ROS2 services. Even so, in PlanSys2 are created a client library that can be used in any application and hides the complexity of using ROS2 services.
+
+For more information visit the <a href="https://plansys2.github.io/design/index.html" target="official website">Resource Information</a>.
+
+## Map
+Here you can see the map we have used for handling this exercise: 
+
+## License
+
+The code and documentation in this project are released under the [Apache 2](LICENSE) license.
