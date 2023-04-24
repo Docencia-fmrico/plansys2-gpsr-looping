@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#ifndef PLANSYS2_BT_EXAMPLE__BEHAVIOR_TREE_NODES__GRANDMACHORES_HPP_
-#define PLANSYS2_BT_EXAMPLE__BEHAVIOR_TREE_NODES__GRANDMACHORES_HPP_
+#ifndef PLANSYS2_BT_LP__BEHAVIOR_TREE_NODES__GRANDMACHORES_HPP_
+#define PLANSYS2_BT_LP__BEHAVIOR_TREE_NODES__GRANDMACHORES_HPP_
 
 #include <string>
 
@@ -41,4 +41,4 @@ public:
 
 }  // namespace plansys2_bt_lp
 
-#endif  // PLANSYS2_BT_EXAMPLE__BEHAVIOR_TREE_NODES__GRANDMACHORES_HPP_
+#endif  // PLANSYS2_BT_LP__BEHAVIOR_TREE_NODES__GRANDMACHORES_HPP_
