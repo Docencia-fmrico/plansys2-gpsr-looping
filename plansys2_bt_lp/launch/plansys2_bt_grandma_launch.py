@@ -76,7 +76,7 @@ def generate_launch_description():
             'bt_xml_file': example_dir + '/behavior_trees_xml/move.xml'
           }
         ])
-    
+
     item_for_grandma_cmd = Node(
         package='plansys2_bt_actions',
         executable='bt_action_node',
@@ -92,7 +92,7 @@ def generate_launch_description():
             'bt_xml_file': example_dir + '/behavior_trees_xml/item_for_grandma.xml'
           }
         ])
-    
+
     organize_item_cmd = Node(
         package='plansys2_bt_actions',
         executable='bt_action_node',
@@ -108,7 +108,7 @@ def generate_launch_description():
             'bt_xml_file': example_dir + '/behavior_trees_xml/organize_item.xml'
           }
         ])
-    
+
     open_door_cmd = Node(
         package='plansys2_bt_actions',
         executable='bt_action_node',
@@ -124,7 +124,7 @@ def generate_launch_description():
             'bt_xml_file': example_dir + '/behavior_trees_xml/open_door.xml'
           }
         ])
-    
+
     move_through_door_cmd = Node(
         package='plansys2_bt_actions',
         executable='bt_action_node',
@@ -156,7 +156,7 @@ def generate_launch_description():
             'bt_xml_file': example_dir + '/behavior_trees_xml/drop_item.xml'
           }
         ])
-    
+
     pick_item_cmd = Node(
         package='plansys2_bt_actions',
         executable='bt_action_node',
@@ -172,7 +172,7 @@ def generate_launch_description():
             'bt_xml_file': example_dir + '/behavior_trees_xml/pick_item.xml'
           }
         ])
-    
+
     request_open_door_cmd = Node(
         package='plansys2_bt_actions',
         executable='bt_action_node',
@@ -188,7 +188,7 @@ def generate_launch_description():
             'bt_xml_file': example_dir + '/behavior_trees_xml/request_open_door.xml'
           }
         ])
-    
+
     ld = LaunchDescription()
 
     ld.add_action(declare_namespace_cmd)
@@ -206,6 +206,5 @@ def generate_launch_description():
     ld.add_action(drop_item_cmd)
     ld.add_action(pick_item_cmd)
     ld.add_action(request_open_door_cmd)
-
 
     return ld

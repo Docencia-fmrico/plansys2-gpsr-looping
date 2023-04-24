@@ -104,20 +104,36 @@ public:
     problem_expert_->addPredicate(plansys2::Predicate("(robot_free loopy)"));
 
     // // House dimension && connection
-    problem_expert_->addPredicate(plansys2::Predicate("(connected_door livingroom corridor door3)"));
+    problem_expert_->addPredicate(
+      plansys2::Predicate(
+        "(connected_door livingroom corridor door3)"));
     problem_expert_->addPredicate(plansys2::Predicate("(connected_door kitchen corridor door4)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(connected_door bathroom livingroom door2)"));
+    problem_expert_->addPredicate(
+      plansys2::Predicate(
+        "(connected_door bathroom livingroom door2)"));
     problem_expert_->addPredicate(plansys2::Predicate("(connected_door yard corridor door6)"));
     problem_expert_->addPredicate(plansys2::Predicate("(connected_door garage corridor door8)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(connected_door grandma_bedroom corridor door7)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(connected_door guest_bedroom corridor door5)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(connected_door corridor livingroom door3)"));
+    problem_expert_->addPredicate(
+      plansys2::Predicate(
+        "(connected_door grandma_bedroom corridor door7)"));
+    problem_expert_->addPredicate(
+      plansys2::Predicate(
+        "(connected_door guest_bedroom corridor door5)"));
+    problem_expert_->addPredicate(
+      plansys2::Predicate(
+        "(connected_door corridor livingroom door3)"));
     problem_expert_->addPredicate(plansys2::Predicate("(connected_door corridor kitchen door4)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(connected_door livingroom bathroom door2)"));
+    problem_expert_->addPredicate(
+      plansys2::Predicate(
+        "(connected_door livingroom bathroom door2)"));
     problem_expert_->addPredicate(plansys2::Predicate("(connected_door corridor yard door6)"));
     problem_expert_->addPredicate(plansys2::Predicate("(connected_door corridor garage door8)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(connected_door corridor grandma_bedroom door7)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(connected_door corridor guest_bedroom door5)"));
+    problem_expert_->addPredicate(
+      plansys2::Predicate(
+        "(connected_door corridor grandma_bedroom door7)"));
+    problem_expert_->addPredicate(
+      plansys2::Predicate(
+        "(connected_door corridor guest_bedroom door5)"));
     problem_expert_->addPredicate(plansys2::Predicate("(connected_door outside livingroom door1)"));
     problem_expert_->addPredicate(plansys2::Predicate("(connected_door livingroom outside door1)"));
 
@@ -151,8 +167,8 @@ public:
     problem_expert_->addPredicate(plansys2::Predicate("(item_should_be tools garage)"));
     problem_expert_->addPredicate(plansys2::Predicate("(item_disorganized tools)"));
 
-    // // Grandma chores
-    //problem_expert_->addPredicate(plansys2::Predicate("(grandma_get_open_door)"));
+    // Grandma chores
+    // problem_expert_->addPredicate(plansys2::Predicate("(grandma_get_open_door)"));
     problem_expert_->addPredicate(plansys2::Predicate("(grandma_wants milk)"));
 
     // Organize towel, give milk grandma
