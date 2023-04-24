@@ -206,6 +206,5 @@ def generate_launch_description():
     ld.add_action(drop_item_cmd)
     ld.add_action(pick_item_cmd)
     ld.add_action(request_open_door_cmd)
-
-
+    
     return ld
