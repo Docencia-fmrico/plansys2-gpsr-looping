@@ -17,7 +17,7 @@
 
 ;; Types ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (:types
-  room corridor - location
+  room near_door - location
   door
   robot
   item
@@ -37,13 +37,13 @@
   (close ?d - door)
 
   (grandma_wants ?i - item)
-  (grandma_has_item)
+  (grandma_has_item ?g - grandma)
   (grandma_req_open_door ?g - grandma ?d - door)
-  (grandma_get_open_door)
+  (grandma_get_open_door ?g - grandma)
   (item_should_be ?i - item ?l - location)
   (item_organized ?i - item)
   (item_disorganized ?i - item)
-  (no_grandma_chores)
+  (no_grandma_chores ?g - grandma)
 );; end Predicates ;;;;;;;;;;;;;;;;;;;;
 
 ;; Functions ;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -57,12 +57,12 @@
   :condition (and
       (at end (and
         ;grandma has all items that request
-        (grandma_has_item)
-        (grandma_get_open_door)
+        (grandma_has_item ?g)
+        (grandma_get_open_door ?g)
       ))
   )
   :effect (and
-      (at end(no_grandma_chores))
+      (at end(no_grandma_chores ?g))
   )
 )
 
@@ -85,18 +85,18 @@
   :effect 
       (and
         (at end(not(grandma_wants ?i)))
-        (at end(grandma_has_item))
+        (at end(grandma_has_item ?g))
       )
 )
 
 (:durative-action organize_item
-  :parameters (?to - location ?i - item)
+  :parameters (?to - location ?i - item ?g - grandma)
   :duration (= ?duration 10)
   :condition 
         (and
           (at start (item_disorganized ?i))
           (over all (and
-            (no_grandma_chores)
+            (no_grandma_chores ?g)
             (item_should_be ?i ?to)
           ))
           (at end (item_at ?i ?to))
@@ -200,7 +200,7 @@
   :effect (and
       (at end(and
       (not(grandma_req_open_door ?g ?d))
-      (grandma_get_open_door)
+      (grandma_get_open_door ?g)
       ))
   )
 );; end Actions ;;;;;;;;;;;;;;;;;;;;;;;;
