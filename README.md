@@ -9,13 +9,13 @@
 1. [Overview](#Overview)
 2. [What is PDDL?](#What-is-PDDL?)
 3. [What is Plansys2?](#What-is-Plansys2?)
+4. [Behavior-trees](#behavior-trees)
 4. [Map](#Map)
 5. [License](#License)
 
 ## Overview
-
-We have created a [PDDL](https://planning.wiki/) domain and six PDDL problems that will be solved using [POPF](https://planning.wiki/ref/planners/popf) and [Plansys2](https://plansys2.github.io/) implemented in ros2. The problem represents a house with different items and a grandma that will ask the robot to do some of the chores for her. We will solve the problem in the gazebo simulator with the robot tiago.
-
+We have executed one of the plans generated in the [task handled before](https://github.com/Docencia-fmrico/ejercicio-pddl-looping). In this ocassion we have created a problem similar to the ones of the task handled before. Moreover, he have obtained Tigao navigating through our custom map.  
+ 
 ## What is PDDL?
 
 Planning Domain Definition Language (PDDL) is a family of languages which allow us to define a planning problem. As planning has evolved, so to has the language used to describe it and as such there are now many versions of PDDL available.
@@ -42,13 +42,101 @@ Each of these nodes exposes its functionality using ROS2 services. Even so, in P
 
 For more information visit the <a href="https://plansys2.github.io/design/index.html" target="official website">Resource Information</a>.
 
+## Behavior Trees 
+Behaviour tree is a mathematical model of plan execution. They have probed more flexible and suitable that state machines for defining robots' simple behaviours. This task uses Behavior Trees to execute all plans. 
+
 ## Map
 Here you can see the map we have used for handling this exercise: 
 <p align="center">
-   <img src="https://github.com/Docencia-fmrico/plansys2-gpsr-looping/blob/origin/Readme/images/map.jpg" width="80%" height="80%">
+   <img src="https://github.com/Docencia-fmrico/ejercicio-pddl-looping/blob/main/images/map.jpg" width="100%" height="100%">
 </p>
-We also created a gazebo world to be able to do this exercise:
 
+For this task is a requirement to make the robot move using navigation and so, we have created a custom map which is similar to the image above. This is how it looks like: 
+
+<p align="center">
+   <img src=
+</p>
+
+### How to create a custom map? 
+Set steps : 
+
+Signpost Map 
+
+## Objects Organized 
+
+These are the objects that must be organized: 
+
+* Towels: bathroom 
+* Cutlery: kitchen
+* Tools: garage
+* Clothes: grandma bedroom
+* Plants: yard
+* Magazines: living room 
+                                                                                                                                   
+## Grandma Priorities
+
+ Anything that grandma asks for, must have a higher priority than the other tasks.
+ These are the high-priority tasks: 
+ 
+* Close/Open main door.
+* Bring her a cup of milk from the kitchen.
+* Bring her pills from the living room.
+* Make bed from the guest's room.
+
+## Domain
+ ### Predicates
+  ### Robot predicates
+    (robot_at ?r - robot ?l - location)    - states where the robot is
+    (robot_free ?r - robot)                - states that the robot isn't carrying anything.
+    (robot_carrying ?r - robot ?o - item)  - states that the robot is carrying an item.
+    
+  ### Grandma predicates
+    (grandma_at ?g - grandma ?l - location)         - states where grandma is
+    (grandma_wants ?i - item)                       - states that grandma wants the robot to bring her an item.
+    (grandma_has_item)                              - states that grandma has all the desired items.
+    (grandma_req_open_door ?g - grandma ?d - door)  - states that grandma wants the robot to open a door for her.
+    (grandma_get_open_door)                         - states that grandma requires no more doors to be opened.
+    (no_grandma_chores)                             - states that grandma has no more requests.
+    
+  ### Item predicates
+    (item_at ?o - item ?l - location)         - states where an item is.
+    (item_should_be ?i - item ?l - location)  - states where an item should be in order to be considered organized.
+    (item_organized ?i - item)                - states that an item is considered organized.
+    (item_disorganized ?i - item)             - states that an item is considered disorganized.
+    
+   ### Locations and doors predicates
+    (connected_door ?l1 ?l2 - location ?d - door) - states that two locations are connected by a door
+    (connected ?l1 ?l2 - location)                - states that two locations are connected (without door).
+    (open ?d - door)                              - states that a door is opened.
+    (close ?d - door)                             - states that a door is closed.
+    
+   ### Actions
+   All actions are durative-actions. The main actions are:
+   
+   ### organize-item
+   If **no_grandma_chroes** is true, move a disorganized item to where it should be and mark it as organized. By setting **no_grandma_chores** as a condition, we can assure that the robot will only organize an item when grandma has no more requests for it. organize-item is a "low-priority" action.
+   
+   ### item_for_grandma
+   Brings the requested item to grandma. Sets **grandma_has_item** as true and **grandma_wants** as false.
+    
+   ### request_open_door
+   Opens the requested door for grandma. Sets **grandma_req_open_door** as false and **grandma_get_open_door** as true.
+   
+   ### grandma_chores
+   If both **grandma_get_open_door** and **grandma_has_item** are *true*, sets **no_grandma_chores** as true. Stating that grandma has no more requests for the robot and it can start working on the low-priority requests.
+
+## Problem
+Set problem defined
+
+## What it is necessary to launch?
+
+
+## Videos
+
+### Nav sim 
+
+
+### Real nav
 ## License
 
 The code and documentation in this project are released under the [Apache 2](LICENSE) license.
