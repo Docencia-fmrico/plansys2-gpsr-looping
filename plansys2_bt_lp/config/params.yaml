@@ -38,7 +38,7 @@ move_through_door:
   ros__parameters:
     plugins:
       - plansys2_move_through_door_bt_node
-    waypoints: ["p1_living", "p2_living", "p2_bathroom", "p3_corridor", "p3_kiving", "p4_kitchen", "p4_corridor", "p5_guest", "p5_corridor", "p6_yard", "p6_corridor", "p7_grandma_bed", "p7_corridor", "p8_garage", "p8_corridor"]
+    waypoints: ["p1_living", "p2_living", "p2_bathroom", "p3_corridor", "p3_living", "p4_kitchen", "p4_corridor", "p5_guest", "p5_corridor", "p6_yard", "p6_corridor", "p7_grandma_bed", "p7_corridor", "p8_garage", "p8_corridor"]
     waypoint_coords:
       p1_living: [-3.6, -9.2, 0.0]
       p2_living: [1.4, -7.8, 0.0]
