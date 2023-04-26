@@ -15,9 +15,9 @@
 7. [Grandma Priorities](#Grandma-Priorities)
 8. [Domain](#Domain)
 9. [Problem](#Problem)
-10.[What-is-necessary-to-launch](#What-is-necessary-to-launch)
-11.[Videos](#Videos)
-12.[License](#License)
+10. [What-is-necessary-to-launch](#What-is-necessary-to-launch)
+11. [Videos](#Videos)
+12. [License](#License)
 
 ## Overview
 We have executed one of the plans generated in the [task handled before](https://github.com/Docencia-fmrico/ejercicio-pddl-looping). In this ocassion we have created a problem similar to the ones of the task handled before. Moreover, he have obtained Tigao navigating through our custom map.  
