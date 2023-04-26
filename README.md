@@ -54,13 +54,22 @@ Here you can see the map we have used for handling this exercise:
 For this task is a requirement to make the robot move using navigation and so, we have created a custom map which is similar to the image above. This is how it looks like: 
 
 <p align="center">
-   <img src=
+   <img src="https://github.com/Docencia-fmrico/plansys2-gpsr-looping/blob/origin/Readme/images/custom_map_1.jpeg" width="100%" height="100%">
+</p>
+
+<p align="center">
+   <img src="https://github.com/Docencia-fmrico/plansys2-gpsr-looping/blob/origin/Readme/images/custom_map_2.jpeg" width="100%" height="100%">
 </p>
 
 ### How to create a custom map? 
 Set steps : 
 
 Signpost Map 
+
+<p align="center">
+   <img src="https://github.com/Docencia-fmrico/plansys2-gpsr-looping/blob/origin/Readme/images/signpost_image.jpeg" width="100%" height="100%">
+</p>
+
 
 ## Objects Organized 
 
