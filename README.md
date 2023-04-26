@@ -137,12 +137,26 @@ These are the objects that must be organized:
 ## Problem
 Set problem defined
 
-## What it is necessary to launch?
-
-
 ## Videos
 
 ### Nav sim 
+Heare we have the simulated navigation, to launch this we need:
+```bash
+ros2 run plansys2_bt_lp nav2_sim_node
+ros2 launch plansys2_bt_lp plansys2_bt_grandma_launch 
+ros2 run plansys2_bt_lp grandma_controller_node
+```
+[Screencast from 04-26-2023 12_48_22 AM.webm](https://user-images.githubusercontent.com/72991939/234434851-74c52e72-6102-480a-8339-540f9b4843c0.webm)
+
+
+### Real navigation
+For this result we need to launch:
+```bash
+ros2 launch ir_robtots simulation.launch.py 
+ros2 launch br2_navigation tiago_navigation.launch.py
+ros2 launch plansys2_bt_lp plansys2_bt_grandma_launch 
+ros2 run plansys2_bt_lp grandma_controller_node
+```
 
 
 ### Real nav
