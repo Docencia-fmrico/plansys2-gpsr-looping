@@ -171,6 +171,7 @@ ros2 launch br2_navigation tiago_navigation.launch.py
 ros2 launch plansys2_bt_lp plansys2_bt_grandma_launch 
 ros2 run plansys2_bt_lp grandma_controller_node
 ```
+[Grabación de pantalla desde 04-26-2023 02_24_23 AM.webm](https://user-images.githubusercontent.com/72991939/234436660-07e6579e-6cec-48cd-bfaf-1916bc0d4eef.webm)
 
 
 ### Real nav
