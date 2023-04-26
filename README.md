@@ -10,8 +10,14 @@
 2. [What is PDDL?](#What-is-PDDL?)
 3. [What is Plansys2?](#What-is-Plansys2?)
 4. [Behavior-trees](#behavior-trees)
-4. [Map](#Map)
-5. [License](#License)
+5. [Map](#Map)
+6. [Objects-Organized](#Objects-organized)
+7. [Grandma Priorities](#Grandma-Priorities)
+8. [Domain](#Domain)
+9. [Problem](#Problem)
+10.[What-is-necessary-to-launch](#What-is-necessary-to-launch)
+11.[Videos](#Videos)
+12.[License](#License)
 
 ## Overview
 We have executed one of the plans generated in the [task handled before](https://github.com/Docencia-fmrico/ejercicio-pddl-looping). In this ocassion we have created a problem similar to the ones of the task handled before. Moreover, he have obtained Tigao navigating through our custom map.  
@@ -62,7 +68,15 @@ For this task is a requirement to make the robot move using navigation and so, w
 </p>
 
 ### How to create a custom map? 
-Set steps : 
+You should follow these steps: 
+
+<p align="center">
+   <img src="https://github.com/Docencia-fmrico/plansys2-gpsr-looping/blob/origin/Readme/images/Screenshot%20from%202023-04-26%2002-16-32.png" width="70%" height="70%">
+</p>
+
+<p align="center">
+   <img src="https://github.com/Docencia-fmrico/plansys2-gpsr-looping/blob/origin/Readme/images/Screenshot%20from%202023-04-26%2002-16-41.png" width="70%" height="70%">
+</p>
 
 Signpost Map 
 
